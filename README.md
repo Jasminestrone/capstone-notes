@@ -34,7 +34,7 @@ What it offers:
 The catch: it only works while my laptop is on and connected to the network.
 The moment I close it or leave, the site goes down and nobody can access it.
 
-### This static version — for anytime access
+### Tachylite Frozen (this site) — for anytime access
 
 This GitHub Pages site solves that problem. It's a frozen, read-only snapshot
 of the vault that's always online — no laptop, no network, no dependencies.
