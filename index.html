@@ -860,18 +860,17 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   .editor-wrap { height: calc(100vh - var(--topbar-height) - 40px); }
 }
 #newNoteBtn, #uploadBtn, #uploadInput, #newNoteModal { display: none !important; }
-.sidebar-header { position: relative; overflow: visible !important; }
-.sidebar-header::after {
+#frozenLabel { position: relative; display: inline-block; overflow: visible !important; }
+#frozenLabel::after {
   content: '';
   position: absolute;
-  bottom: -18px;
-  left: 0;
-  right: 0;
-  height: 18px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='18'%3E%3Cpolygon points='4,0 9,0 6.5,15' fill='%238cb8d4' opacity='.4'/%3E%3Cpolygon points='18,0 21,0 19.5,8' fill='%238cb8d4' opacity='.28'/%3E%3Cpolygon points='32,0 38,0 35,18' fill='%238cb8d4' opacity='.35'/%3E%3Cpolygon points='52,0 56,0 54,11' fill='%238cb8d4' opacity='.4'/%3E%3Cpolygon points='68,0 73,0 70.5,16' fill='%238cb8d4' opacity='.32'/%3E%3Cpolygon points='86,0 89,0 87.5,6' fill='%238cb8d4' opacity='.35'/%3E%3C/svg%3E") repeat-x;
+  bottom: -14px;
+  left: -2px;
+  right: -2px;
+  height: 14px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='14'%3E%3Cpolygon points='2,0 3.5,0 2.8,4' fill='%239cc8e0' opacity='.3'/%3E%3Cpolygon points='6,0 9,0 7,10' fill='%238cb8d4' opacity='.45'/%3E%3Cpolygon points='12,0 13,0 12.5,3' fill='%23a0d0e8' opacity='.25'/%3E%3Cpolygon points='16,0 20.5,0 17.8,14' fill='%237aafc8' opacity='.4'/%3E%3Cpolygon points='23,0 24.5,0 23.8,7' fill='%239cc8e0' opacity='.35'/%3E%3Cpolygon points='27,0 30,0 28.8,9' fill='%238cb8d4' opacity='.38'/%3E%3Cpolygon points='33,0 34,0 33.5,3.5' fill='%23a0d0e8' opacity='.22'/%3E%3Cpolygon points='37,0 39,0 37.8,11' fill='%237aafc8' opacity='.42'/%3E%3Cpolygon points='42,0 45.5,0 43.5,6' fill='%239cc8e0' opacity='.3'/%3E%3Cpolygon points='48,0 49.5,0 48.6,12' fill='%238cb8d4' opacity='.36'/%3E%3Cpolygon points='52,0 53,0 52.5,2.5' fill='%23a0d0e8' opacity='.2'/%3E%3Cpolygon points='55,0 58,0 56.2,8' fill='%237aafc8' opacity='.38'/%3E%3C/svg%3E") repeat-x;
   pointer-events: none;
-  z-index: 2;
-  filter: drop-shadow(0 2px 4px rgba(100,170,220,0.15));
+  filter: drop-shadow(0 1px 3px rgba(100,170,220,0.2));
 }
 </style>
 </head>
@@ -881,7 +880,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   <nav class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-      Tachylite <span style="font-weight:400;opacity:.6;font-size:10px">FROZEN</span>
+      Tachylite <span id="frozenLabel" style="font-weight:400;opacity:.8;font-size:10px">FROZEN</span>
       <span id="fileCount" style="font-size:10px;font-weight:400;opacity:.5;margin-left:2px"></span>
       <div class="sidebar-header-actions">
         <button class="sidebar-btn" id="newNoteBtn" title="New note">
@@ -2345,7 +2344,7 @@ async function openGraphView() {
 
 // ---------- Download all ----------
 $('#downloadAllBtn').addEventListener('click', () => {
-  window.location.href = 'notes_2026-02-14_18-05-27.zip';
+  window.location.href = 'notes_2026-02-14_18-12-06.zip';
 });
 
 // ---------- Upload ----------
