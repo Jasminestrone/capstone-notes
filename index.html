@@ -11,7 +11,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs
 window.pdfjsLib = pdfjsLib;
 </script>
 <style>
-/* ---------- Reset & Variables (Obsidian Theme) ---------- */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
@@ -39,7 +39,7 @@ window.pdfjsLib = pdfjsLib;
 html, body { height: 100%; background: var(--bg-primary); color: var(--text); font-family: var(--font); font-size: 16px; line-height: 1.6; }
 ::selection { background: var(--accent-dim); }
 
-/* ---------- Layout ---------- */
+
 .app { display: flex; height: 100vh; overflow: hidden; }
 
 .sidebar {
@@ -166,7 +166,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   opacity: .6;
 }
 
-/* ---------- Main ---------- */
+
 .main { flex: 1; display: flex; flex-direction: column; min-width: 0; background: var(--bg-primary); }
 
 .topbar {
@@ -237,7 +237,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   scroll-behavior: smooth;
 }
 
-/* Save flash */
+
 .topbar-btn.save-success {
   background: #2e7d32 !important;
   border-color: #2e7d32 !important;
@@ -249,7 +249,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
 .content-area::-webkit-scrollbar-thumb { background: rgba(255,255,255,.07); border-radius: 10px; }
 .content-area::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.13); }
 
-/* ---------- Welcome ---------- */
+
 .welcome {
   display: flex;
   flex-direction: column;
@@ -262,7 +262,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
 .welcome svg { opacity: .2; }
 .welcome p { font-size: 14px; color: var(--text-faint); }
 
-/* ---------- Markdown Content ---------- */
+
 .markdown-body { max-width: 750px; margin: 0 auto; color: var(--text); }
 
 .markdown-body h1 { font-size: 1.9em; font-weight: 700; margin: 0 0 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border); color: var(--text); letter-spacing: -.01em; }
@@ -326,12 +326,12 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
 
 .markdown-body .task-list-item { list-style: none; margin-left: -1.5em; }
 
-/* ---------- Syntax highlight (Obsidian-like) ---------- */
+
 .markdown-body pre code .kw, .markdown-body pre .kw { color: #c4a7e7; }
 .markdown-body pre code .st, .markdown-body pre .st { color: #9ccfd8; }
 .markdown-body pre code .co, .markdown-body pre .co { color: #6e6a86; font-style: italic; }
 
-/* ---------- Editor ---------- */
+
 .editor-wrap {
   max-width: 750px;
   margin: 0 auto;
@@ -421,7 +421,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
 }
 .editor-textarea:focus { border-color: var(--accent-dim); box-shadow: 0 0 0 2px rgba(134,112,255,.1); }
 
-/* ---------- Modal ---------- */
+
 .modal-overlay {
   display: none;
   position: fixed;
@@ -477,7 +477,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
 
 #uploadInput { display: none; }
 
-/* ---------- PDF Viewer ---------- */
+
 .pdf-viewer {
   display: flex;
   flex-direction: column;
@@ -635,7 +635,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   background: linear-gradient(180deg, var(--bg-secondary) 0%, #131326 100%);
 }
 
-/* ---------- Graph View ---------- */
+
 .graph-viewer {
   display: flex;
   flex-direction: column;
@@ -722,7 +722,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   margin-top: 2px;
 }
 
-/* ---------- Image Viewer ---------- */
+
 .img-viewer {
   display: flex;
   flex-direction: column;
@@ -849,7 +849,7 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   text-align: center;
 }
 
-/* ---------- Responsive ---------- */
+
 @media (max-width: 768px) {
   :root { --sidebar-width: 260px; }
   .content-area { padding: 20px 16px; }
@@ -949,8 +949,6 @@ const topbarActions = $('#topbarActions');
 const newNoteModal = $('#newNoteModal');
 const newNotePath = $('#newNotePath');
 const uploadInput = $('#uploadInput');
-
-// ---------- Server config ----------
 let serverConfig = { allow_edit_all: false, allow_file_creation: true, poll_interval: 15 };
 fetch('/api/config').then(r => r.json()).then(cfg => {
   serverConfig = cfg;
@@ -960,8 +958,6 @@ fetch('/api/config').then(r => r.json()).then(cfg => {
   }
   startPolling(cfg.poll_interval || 15);
 }).catch(() => { startPolling(15); });
-
-// ---------- Sidebar toggle ----------
 $('#toggleSidebar').addEventListener('click', () => {
   sidebar.classList.toggle('collapsed');
   overlay.classList.toggle('visible', !sidebar.classList.contains('collapsed') && window.innerWidth <= 768);
@@ -970,8 +966,6 @@ overlay.addEventListener('click', () => {
   sidebar.classList.add('collapsed');
   overlay.classList.remove('visible');
 });
-
-// ---------- Sidebar resize ----------
 (() => {
   const handle = $('#sidebarResize');
   let dragging = false;
@@ -999,8 +993,6 @@ overlay.addEventListener('click', () => {
     document.body.style.userSelect = '';
   });
 })();
-
-// ---------- Build file tree ----------
 function iconSvg(type, name) {
   if (type === 'folder') {
     return '<svg class="tree-icon" viewBox="0 0 24 24" fill="none" stroke="#908caa" stroke-width="2"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>';
@@ -1047,7 +1039,6 @@ function renderTree(items, container, depth = 0) {
       row.style.setProperty('--depth', depth);
       const ext = item.name.split('.').pop().toLowerCase();
       const dot = item.editable ? '<span class="tree-editable-dot" title="You created this"></span>' : '';
-      // Spacer to align with folders (chevron width)
       const displayName = item.name.endsWith('.md') ? item.name.slice(0, -3) : item.name;
       row.innerHTML = `<span style="width:16px;flex-shrink:0"></span>` + iconSvg('file', item.name) + `<span>${esc(displayName)}</span>` + dot;
 
@@ -1077,16 +1068,12 @@ function esc(s) {
   d.textContent = s;
   return d.innerHTML;
 }
-
-// ---------- State ----------
 let activeItem = null;
 let currentNotePath = null;
 let currentNoteMtime = null;
 let currentNoteEditable = false;
 let editMode = false;
 let lastTreeHash = null;
-
-// ---------- Topbar actions ----------
 function updateTopbar() {
   if (editMode) {
     topbarActions.innerHTML =
@@ -1104,18 +1091,13 @@ function updateTopbar() {
     topbarActions.innerHTML = '';
   }
 }
-
-// ---------- Load note ----------
 async function loadNote(path, {preserveScroll = false} = {}) {
   contentArea.style.padding = '';
-  // Highlight active
   if (activeItem) activeItem.classList.remove('active');
   const items = fileTree.querySelectorAll('.tree-item[data-path]');
   items.forEach(el => {
     if (el.dataset.path === path) { el.classList.add('active'); activeItem = el; }
   });
-
-  // Breadcrumb
   const parts = path.split('/');
   breadcrumb.innerHTML = parts.map((p, i) =>
     i === parts.length - 1
@@ -1124,8 +1106,6 @@ async function loadNote(path, {preserveScroll = false} = {}) {
   ).join('');
 
   const scrollPos = preserveScroll ? contentArea.scrollTop : null;
-
-  // Fetch note
   try {
     const res = await fetch('data/notes/' + encodeURIPath(path) + '.json');
     if (!res.ok) throw new Error('Not found');
@@ -1140,11 +1120,7 @@ async function loadNote(path, {preserveScroll = false} = {}) {
     currentNoteEditable = data.editable || false;
     editMode = false;
     updateTopbar();
-
-    // Re-highlight with resolved path (wikilinks may use short names)
     revealInTree(resolvedPath);
-
-    // Handle internal note links
     contentArea.querySelectorAll('a[href^="#note:"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
@@ -1153,8 +1129,6 @@ async function loadNote(path, {preserveScroll = false} = {}) {
         revealInTree(target);
       });
     });
-
-    // Handle PDF links
     contentArea.querySelectorAll('a[href^="#pdf:"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
@@ -1162,8 +1136,6 @@ async function loadNote(path, {preserveScroll = false} = {}) {
         loadPdf(target, target.split('/').pop());
       });
     });
-
-    // Handle image links
     contentArea.querySelectorAll('a[href^="#img:"]').forEach(a => {
       a.addEventListener('click', e => {
         e.preventDefault();
@@ -1171,8 +1143,6 @@ async function loadNote(path, {preserveScroll = false} = {}) {
         loadImage(target, target.split('/').pop());
       });
     });
-
-    // Handle image src for relative paths + click to open viewer
     contentArea.querySelectorAll('img').forEach(img => {
       const src = img.getAttribute('src');
       if (src && !src.startsWith('/') && !src.startsWith('http')) {
@@ -1186,19 +1156,13 @@ async function loadNote(path, {preserveScroll = false} = {}) {
         loadImage(imgPath, imgPath.split('/').pop());
       });
     });
-
-    // Restore scroll or go to top
     contentArea.scrollTop = scrollPos !== null ? scrollPos : 0;
-
-    // Update URL (only on explicit navigation, not live refresh)
     if (!preserveScroll) {
       history.pushState({ path }, '', '?note=' + encodeURIComponent(path));
     }
   } catch (e) {
     contentArea.innerHTML = '<div class="welcome"><p>Could not load note: ' + esc(path) + '</p></div>';
   }
-
-  // Close sidebar on mobile
   if (window.innerWidth <= 768 && !preserveScroll) {
     sidebar.classList.add('collapsed');
     overlay.classList.remove('visible');
@@ -1206,7 +1170,6 @@ async function loadNote(path, {preserveScroll = false} = {}) {
 }
 
 function revealInTree(path) {
-  // Expand parent folders along the path
   const parts = path.split('/');
   let container = fileTree;
   for (let i = 0; i < parts.length - 1; i++) {
@@ -1224,7 +1187,6 @@ function revealInTree(path) {
       }
     }
   }
-  // Highlight the file
   const items = fileTree.querySelectorAll('.tree-item[data-path]');
   items.forEach(el => {
     if (el.dataset.path === path) {
@@ -1235,27 +1197,20 @@ function revealInTree(path) {
     }
   });
 }
-
-// ---------- Load PDF inline (PDF.js canvas renderer) ----------
 let pdfState = { doc: null, scale: 1.5, rendering: false };
 
 function loadPdf(path, name) {
-  // Highlight active in tree
   if (activeItem) activeItem.classList.remove('active');
   const items = fileTree.querySelectorAll('.tree-item[data-path]');
   items.forEach(el => {
     if (el.dataset.path === path) { el.classList.add('active'); activeItem = el; }
   });
-
-  // Breadcrumb
   const parts = path.split('/');
   breadcrumb.innerHTML = parts.map((p, i) =>
     i === parts.length - 1
       ? `<span class="crumb-active">${esc(p)}</span>`
       : `<span>${esc(p)}</span><span>/</span>`
   ).join('');
-
-  // Clear note state so polling doesn't interfere
   currentNotePath = null;
   currentNoteMtime = null;
   currentNoteEditable = false;
@@ -1314,8 +1269,6 @@ function loadPdf(path, name) {
   const zoomOutBtn = viewer.querySelector('#pdfZoomOut');
   const fitWidthBtn = viewer.querySelector('#pdfFitWidth');
   const darkModeBtn = viewer.querySelector('#pdfDarkMode');
-
-  // Restore dark mode preference (default: on)
   if (localStorage.getItem('pdfDarkMode') !== '0') {
     canvasContainer.classList.add('pdf-darkmode');
     darkModeBtn.classList.add('active');
@@ -1330,12 +1283,11 @@ function loadPdf(path, name) {
   let totalPages = 1;
   let pdfDoc = null;
   let currentScale = 1.5;
-  let fitToWidth = true; // default: auto-fit to container width
+  let fitToWidth = true;
   let renderQueued = false;
 
   function getFitScale() {
     if (!pdfDoc) return 1.5;
-    // Use cached first-page width
     const w = canvasContainer.clientWidth - 40;
     return w > 0 && pdfDoc._page1Width ? w / pdfDoc._page1Width : 1.5;
   }
@@ -1380,8 +1332,6 @@ function loadPdf(path, name) {
     const wrapper = canvasContainer.querySelector('[data-page="' + num + '"]');
     if (wrapper) wrapper.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-
-  // Track current visible page on scroll
   canvasContainer.addEventListener('scroll', () => {
     const wrappers = canvasContainer.querySelectorAll('.pdf-page-wrapper');
     const containerTop = canvasContainer.scrollTop;
@@ -1430,8 +1380,6 @@ function loadPdf(path, name) {
     await renderAllPages();
     scrollToPage(currentPage);
   });
-
-  // Re-render on container resize (sidebar drag, window resize)
   const resizeObserver = new ResizeObserver(() => {
     if (!pdfDoc || !fitToWidth) return;
     if (renderQueued) return;
@@ -1444,16 +1392,12 @@ function loadPdf(path, name) {
     });
   });
   resizeObserver.observe(canvasContainer);
-
-  // Load the PDF
   (async () => {
     try {
       while (!window.pdfjsLib) await new Promise(r => setTimeout(r, 50));
       pdfDoc = await window.pdfjsLib.getDocument(rawUrl).promise;
       totalPages = pdfDoc.numPages;
       currentPage = 1;
-
-      // Cache first page's natural width for fit calculations
       const firstPage = await pdfDoc.getPage(1);
       pdfDoc._page1Width = firstPage.getViewport({ scale: 1 }).width;
 
@@ -1465,32 +1409,23 @@ function loadPdf(path, name) {
   })();
 
   history.pushState({ path, pdf: true }, '', '?pdf=' + encodeURIComponent(path));
-
-  // Close sidebar on mobile
   if (window.innerWidth <= 768) {
     sidebar.classList.add('collapsed');
     overlay.classList.remove('visible');
   }
 }
-
-// ---------- Load Image inline ----------
 function loadImage(path, name) {
-  // Highlight active in tree
   if (activeItem) activeItem.classList.remove('active');
   const items = fileTree.querySelectorAll('.tree-item[data-path]');
   items.forEach(el => {
     if (el.dataset.path === path) { el.classList.add('active'); activeItem = el; }
   });
-
-  // Breadcrumb
   const parts = path.split('/');
   breadcrumb.innerHTML = parts.map((p, i) =>
     i === parts.length - 1
       ? `<span class="crumb-active">${esc(p)}</span>`
       : `<span>${esc(p)}</span><span>/</span>`
   ).join('');
-
-  // Clear note state
   currentNotePath = null;
   currentNoteMtime = null;
   currentNoteEditable = false;
@@ -1542,7 +1477,7 @@ function loadImage(path, name) {
   const zoomLabel = viewer.querySelector('#imgZoomLabel');
   const checkerBtn = viewer.querySelector('#imgCheckerBg');
 
-  let imgScale = 0; // 0 = fit mode
+  let imgScale = 0;
   let naturalW = 0, naturalH = 0;
 
   imgEl.addEventListener('load', () => {
@@ -1571,7 +1506,6 @@ function loadImage(path, name) {
 
   viewer.querySelector('#imgZoomIn').addEventListener('click', () => {
     if (imgScale === 0) {
-      // Calculate current fit scale
       const cw = imgContainer.clientWidth, ch = imgContainer.clientHeight;
       imgScale = naturalW > 0 ? Math.min(cw / naturalW, ch / naturalH, 1) : 1;
     }
@@ -1592,8 +1526,6 @@ function loadImage(path, name) {
     imgScale = 0;
     applyZoom();
   });
-
-  // Double click to toggle 100% / fit
   imgEl.addEventListener('dblclick', e => {
     e.preventDefault();
     if (imgScale === 0) {
@@ -1603,8 +1535,6 @@ function loadImage(path, name) {
     }
     applyZoom();
   });
-
-  // Mouse wheel zoom
   imgContainer.addEventListener('wheel', e => {
     e.preventDefault();
     if (imgScale === 0) {
@@ -1615,8 +1545,6 @@ function loadImage(path, name) {
     imgScale = Math.min(Math.max(imgScale + delta, 0.1), 10);
     applyZoom();
   }, { passive: false });
-
-  // Pan when zoomed
   let panning = false, panStartX = 0, panStartY = 0, scrollStartX = 0, scrollStartY = 0;
   imgContainer.addEventListener('mousedown', e => {
     if (imgScale === 0) return;
@@ -1637,8 +1565,6 @@ function loadImage(path, name) {
     panning = false;
     imgContainer.style.cursor = '';
   });
-
-  // Checker background toggle
   if (checkerBtn) {
     checkerBtn.addEventListener('click', () => {
       imgContainer.classList.toggle('img-checker-bg');
@@ -1653,9 +1579,6 @@ function loadImage(path, name) {
     overlay.classList.remove('visible');
   }
 }
-
-// ---------- Edit mode ----------
-// Editor helpers
 const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
 const modKey = isMac ? 'Cmd' : 'Ctrl';
 
@@ -1664,7 +1587,6 @@ function editorWrap(ta, prefix, suffix) {
   const sel = ta.value.substring(start, end);
   const before = ta.value.substring(0, start);
   const after = ta.value.substring(end);
-  // If already wrapped, unwrap
   if (before.endsWith(prefix) && after.startsWith(suffix)) {
     ta.value = before.slice(0, -prefix.length) + sel + after.slice(suffix.length);
     ta.selectionStart = start - prefix.length;
@@ -1684,7 +1606,6 @@ function editorWrap(ta, prefix, suffix) {
 function editorLinePrefix(ta, prefix) {
   const start = ta.selectionStart, end = ta.selectionEnd;
   const val = ta.value;
-  // Find line boundaries of selection
   let lineStart = val.lastIndexOf('\n', start - 1) + 1;
   let lineEnd = val.indexOf('\n', end);
   if (lineEnd === -1) lineEnd = val.length;
@@ -1735,8 +1656,6 @@ async function enterEditMode() {
     updateTopbar();
     const wrap = document.createElement('div');
     wrap.className = 'editor-wrap';
-
-    // Toolbar
     const toolbar = document.createElement('div');
     toolbar.className = 'editor-toolbar';
     toolbar.innerHTML =
@@ -1769,8 +1688,6 @@ async function enterEditMode() {
     contentArea.innerHTML = '';
     contentArea.appendChild(wrap);
     ta.focus();
-
-    // Toolbar actions
     toolbar.addEventListener('click', e => {
       const btn = e.target.closest('[data-action]');
       if (!btn) return;
@@ -1810,8 +1727,6 @@ async function enterEditMode() {
         }
       }
     });
-
-    // Keyboard shortcuts
     ta.addEventListener('keydown', e => {
       const mod = isMac ? e.metaKey : e.ctrlKey;
       if (mod && e.key === 'b') { e.preventDefault(); editorWrap(ta, '**', '**'); }
@@ -1823,11 +1738,9 @@ async function enterEditMode() {
         e.preventDefault();
         const start = ta.selectionStart, end = ta.selectionEnd;
         if (start === end) {
-          // Simple tab insert
           ta.value = ta.value.substring(0, start) + '\t' + ta.value.substring(end);
           ta.selectionStart = ta.selectionEnd = start + 1;
         } else {
-          // Indent/outdent selected lines
           const val = ta.value;
           let lineStart = val.lastIndexOf('\n', start - 1) + 1;
           let lineEnd = val.indexOf('\n', end);
@@ -1843,7 +1756,6 @@ async function enterEditMode() {
         }
       }
       else if (e.key === 'Enter') {
-        // Auto-continue lists
         const val = ta.value;
         const pos = ta.selectionStart;
         const lineStart = val.lastIndexOf('\n', pos - 1) + 1;
@@ -1853,7 +1765,7 @@ async function enterEditMode() {
         const numMatch = line.match(/^(\s*)(\d+)\.\s/);
         const checkMatch = line.match(/^(\s*-\s\[[ x]\]\s)/);
         if (checkMatch) {
-          if (line.trim() === '- [ ]' || line.trim() === '- [x]') { // empty check item, stop list
+          if (line.trim() === '- [ ]' || line.trim() === '- [x]') {
             e.preventDefault();
             ta.value = val.substring(0, lineStart) + '\n' + val.substring(pos);
             ta.selectionStart = ta.selectionEnd = lineStart + 1;
@@ -1861,7 +1773,7 @@ async function enterEditMode() {
             prefix = checkMatch[1].replace(/\[x\]/, '[ ]');
           }
         } else if (numMatch) {
-          if (line.trim() === numMatch[2] + '.') { // empty num item
+          if (line.trim() === numMatch[2] + '.') {
             e.preventDefault();
             ta.value = val.substring(0, lineStart) + '\n' + val.substring(pos);
             ta.selectionStart = ta.selectionEnd = lineStart + 1;
@@ -1869,7 +1781,7 @@ async function enterEditMode() {
             prefix = numMatch[1] + (parseInt(numMatch[2]) + 1) + '. ';
           }
         } else if (bulletMatch) {
-          if (line.trim() === '-' || line.trim() === '*' || line.trim() === '+') { // empty bullet
+          if (line.trim() === '-' || line.trim() === '*' || line.trim() === '+') {
             e.preventDefault();
             ta.value = val.substring(0, lineStart) + '\n' + val.substring(pos);
             ta.selectionStart = ta.selectionEnd = lineStart + 1;
@@ -1902,7 +1814,6 @@ async function saveEdit() {
       body: JSON.stringify({content: ta.value})
     });
     if (!res.ok) throw new Error('Save failed');
-    // Flash save button green
     if (saveBtn) {
       saveBtn.classList.add('save-success');
       saveBtn.textContent = 'Saved';
@@ -1943,8 +1854,6 @@ async function deleteNote() {
     alert('Delete failed');
   }
 }
-
-// ---------- New note modal ----------
 $('#newNoteBtn').addEventListener('click', () => {
   newNotePath.value = '';
   newNoteModal.classList.add('visible');
@@ -1972,14 +1881,11 @@ $('#newNoteConfirm').addEventListener('click', async () => {
     newNoteModal.classList.remove('visible');
     await reloadTree();
     await loadNote(data.path);
-    // Auto-enter edit mode for new notes
     if (currentNoteEditable) enterEditMode();
   } catch(e) {
     alert('Failed to create note');
   }
 });
-
-// ---------- Graph view ----------
 $('#graphViewBtn').addEventListener('click', () => openGraphView());
 
 async function openGraphView() {
@@ -2023,8 +1929,6 @@ async function openGraphView() {
   const tooltip = viewer.querySelector('#graphTooltip');
   const statsEl = viewer.querySelector('#graphStats');
   let notesOnly = false;
-
-  // Fetch graph data
   let graphData;
   try {
     const res = await fetch('data/graph.json');
@@ -2050,11 +1954,7 @@ async function openGraphView() {
     statsEl.textContent = nodes.length + ' files, ' + edges.length + ' links';
     initSimulation();
   }
-
-  // Colors by group
   const groupColors = { note: '#8673ff', pdf: '#eb6f92', image: '#9ccfd8', folder: '#e0def4', other: '#6e6a86' };
-
-  // Force simulation state
   let simNodes = [];
   let animId = null;
   let camX = 0, camY = 0, camZoom = 1;
@@ -2065,7 +1965,6 @@ async function openGraphView() {
   function initSimulation() {
     if (animId) cancelAnimationFrame(animId);
     const W = wrap.clientWidth, H = wrap.clientHeight;
-    // Position nodes randomly
     simNodes = nodes.map((n, i) => ({
       ...n,
       x: (Math.random() - 0.5) * W * 0.6,
@@ -2075,7 +1974,6 @@ async function openGraphView() {
     }));
     const idxMap = {};
     simNodes.forEach((n, i) => idxMap[n.id] = i);
-    // Pre-build edge index refs
     edges.forEach(e => { e.si = idxMap[e.source]; e.ti = idxMap[e.target]; });
     camX = 0; camY = 0; camZoom = 1;
     simulate();
@@ -2091,12 +1989,10 @@ async function openGraphView() {
     let iterations = 0;
 
     function tick() {
-      // Center gravity
       simNodes.forEach(n => {
         n.vx -= n.x * center;
         n.vy -= n.y * center;
       });
-      // Repulsion (Barnes-Hut simplified: direct pairwise, capped)
       for (let i = 0; i < simNodes.length; i++) {
         for (let j = i + 1; j < simNodes.length; j++) {
           let dx = simNodes[j].x - simNodes[i].x;
@@ -2109,7 +2005,6 @@ async function openGraphView() {
           simNodes[j].vx += fx; simNodes[j].vy += fy;
         }
       }
-      // Attraction (edges)
       edges.forEach(e => {
         if (e.si === undefined || e.ti === undefined) return;
         const a = simNodes[e.si], b = simNodes[e.ti];
@@ -2121,7 +2016,6 @@ async function openGraphView() {
         a.vx += fx; a.vy += fy;
         b.vx -= fx; b.vy -= fy;
       });
-      // Integrate
       simNodes.forEach(n => {
         if (n === dragging) return;
         n.vx *= damping; n.vy *= damping;
@@ -2160,8 +2054,6 @@ async function openGraphView() {
     ctx.translate(W / 2, H / 2);
     ctx.scale(camZoom, camZoom);
     ctx.translate(-camX, -camY);
-
-    // Draw edges
     edges.forEach(e => {
       if (e.si === undefined || e.ti === undefined) return;
       const a = simNodes[e.si], b = simNodes[e.ti];
@@ -2187,14 +2079,10 @@ async function openGraphView() {
       ctx.stroke();
       ctx.setLineDash([]);
     });
-
-    // Draw nodes
     simNodes.forEach(n => {
       const isHover = n === hoverNode;
       const col = groupColors[n.group] || groupColors.other;
       const isFolder = n.group === 'folder';
-
-      // Glow for hovered nodes
       if (isHover) {
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r + 10, 0, Math.PI * 2);
@@ -2206,7 +2094,6 @@ async function openGraphView() {
       }
 
       if (isFolder) {
-        // Draw folders as rounded squares
         const s = n.r * 1.6;
         const rr = 3;
         ctx.beginPath();
@@ -2231,8 +2118,6 @@ async function openGraphView() {
         ctx.fillStyle = isHover ? col : col + 'aa';
         ctx.fill();
       }
-
-      // Labels: always show for folders, show for hover or well-connected nodes
       if (isHover || isFolder || n.r >= 8) {
         ctx.font = ((isHover || isFolder) ? '600 ' : '') + (isFolder ? '12' : '11') + 'px ' + getComputedStyle(document.body).fontFamily;
         ctx.fillStyle = isHover ? '#fff' : isFolder ? 'rgba(224,222,244,.75)' : 'rgba(224,222,244,.6)';
@@ -2244,8 +2129,6 @@ async function openGraphView() {
 
     ctx.restore();
   }
-
-  // Interaction
   function nodeAt(sx, sy) {
     const w = screenToWorld(sx, sy);
     for (let i = simNodes.length - 1; i >= 0; i--) {
@@ -2312,8 +2195,6 @@ async function openGraphView() {
     if (dragging) { dragging = null; canvas.style.cursor = 'default'; }
     if (panning) { panning = false; canvas.style.cursor = 'default'; }
   });
-
-  // Click to open note
   canvas.addEventListener('dblclick', e => {
     const rect = canvas.getBoundingClientRect();
     const n = nodeAt(e.clientX - rect.left, e.clientY - rect.top);
@@ -2322,23 +2203,17 @@ async function openGraphView() {
     else if (n.group === 'pdf') loadPdf(n.path, n.name);
     else if (n.group === 'image') loadImage(n.path, n.name);
   });
-
-  // Zoom
   canvas.addEventListener('wheel', e => {
     e.preventDefault();
     const factor = e.deltaY > 0 ? 0.9 : 1.1;
     camZoom = Math.min(Math.max(camZoom * factor, 0.2), 5);
     draw();
   }, { passive: false });
-
-  // Filter button
   viewer.querySelector('#graphFilter').addEventListener('click', function() {
     notesOnly = !notesOnly;
     this.classList.toggle('active', notesOnly);
     filterGraph();
   });
-
-  // Reset button
   viewer.querySelector('#graphReset').addEventListener('click', () => {
     camX = 0; camY = 0; camZoom = 1;
     filterGraph();
@@ -2352,13 +2227,9 @@ async function openGraphView() {
     overlay.classList.remove('visible');
   }
 }
-
-// ---------- Download all ----------
 $('#downloadAllBtn').addEventListener('click', () => {
-  window.location.href = 'notes_2026-02-15_14-22-56.zip';
+  window.location.href = 'notes_2026-02-15_15-49-03.zip';
 });
-
-// ---------- Upload ----------
 $('#uploadBtn').addEventListener('click', () => uploadInput.click());
 uploadInput.addEventListener('change', async () => {
   const file = uploadInput.files[0];
@@ -2376,8 +2247,6 @@ uploadInput.addEventListener('change', async () => {
   }
   uploadInput.value = '';
 });
-
-// ---------- Handle browser back/forward ----------
 window.addEventListener('popstate', e => {
   if (e.state && e.state.graph) {
     openGraphView();
@@ -2389,18 +2258,14 @@ window.addEventListener('popstate', e => {
     loadNote(e.state.path);
   }
 });
-
-// ---------- Global keyboard shortcuts ----------
 document.addEventListener('keydown', e => {
   const mod = navigator.platform.toUpperCase().indexOf('MAC') >= 0 ? e.metaKey : e.ctrlKey;
-  // Ctrl/Cmd+N — new note
   if (mod && e.key === 'n' && !editMode && serverConfig.allow_file_creation) {
     e.preventDefault();
     newNotePath.value = '';
     newNoteModal.classList.add('visible');
     setTimeout(() => newNotePath.focus(), 50);
   }
-  // Escape — close modal or exit edit mode
   if (e.key === 'Escape') {
     if (newNoteModal.classList.contains('visible')) {
       newNoteModal.classList.remove('visible');
@@ -2409,16 +2274,12 @@ document.addEventListener('keydown', e => {
     }
   }
 });
-
-// ---------- Init ----------
 (async () => {
   const res = await fetch('data/tree.json');
   const tree = await res.json();
   renderTree(tree, fileTree);
   const fc = $('#fileCount');
   if (fc) fc.textContent = countFiles(tree);
-
-  // Load note, PDF, image, or graph from URL if present
   const params = new URLSearchParams(location.search);
   const note = params.get('note');
   const pdfParam = params.get('pdf');
@@ -2434,7 +2295,6 @@ document.addEventListener('keydown', e => {
   } else if (note) {
     loadNote(note);
   }
-  // Auto-expand tree path
   if (targetPath) {
     const parts = targetPath.split('/');
     let container = fileTree;
@@ -2455,13 +2315,11 @@ document.addEventListener('keydown', e => {
     }
   }
 })();
-
-// ---------- Live reload polling (battery-friendly) ----------
 let pollPaused = false;
 
 document.addEventListener('visibilitychange', () => {
   pollPaused = document.hidden;
-  if (!document.hidden) pollCheck(); // immediate check when tab becomes visible
+  if (!document.hidden) pollCheck();
 });
 
 function countFiles(items) {
@@ -2474,7 +2332,6 @@ function countFiles(items) {
 }
 
 async function reloadTree() {
-  // Remember which folders are open
   const openPaths = new Set();
   fileTree.querySelectorAll('.tree-chevron.open').forEach(chev => {
     const row = chev.closest('.tree-item');
@@ -2487,8 +2344,6 @@ async function reloadTree() {
   renderTree(tree, fileTree);
   const fc = $('#fileCount');
   if (fc) fc.textContent = countFiles(tree);
-
-  // Restore open folders
   fileTree.querySelectorAll('.tree-item').forEach(row => {
     if (!row.dataset.path && openPaths.has(row.textContent.trim())) {
       const chev = row.querySelector('.tree-chevron');
@@ -2497,8 +2352,6 @@ async function reloadTree() {
       if (children && children.classList.contains('tree-children')) children.classList.add('open');
     }
   });
-
-  // Restore active highlight
   if (currentNotePath) {
     fileTree.querySelectorAll('.tree-item[data-path]').forEach(el => {
       if (el.dataset.path === currentNotePath) {
@@ -2515,18 +2368,14 @@ if(false) {
     const url = '/api/check' + (currentNotePath ? '?note=' + encodeURIComponent(currentNotePath) : '');
     const res = await fetch(url);
     const data = await res.json();
-
-    // Refresh tree if structure changed
     if (lastTreeHash !== null && data.tree_hash !== lastTreeHash) {
       await reloadTree();
     }
     lastTreeHash = data.tree_hash;
-
-    // Refresh note content if file was modified (but not while editing)
     if (currentNotePath && !editMode && currentNoteMtime !== null && data.note_mtime !== null && data.note_mtime !== currentNoteMtime) {
       loadNote(currentNotePath, {preserveScroll: true});
     }
-  } catch (e) { /* server unreachable, skip */ }
+  } catch (e) {  }
 }
 
 function startPolling(seconds) {
