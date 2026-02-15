@@ -4,7 +4,7 @@ My capstone research vault, viewable in two ways depending on the situation.
 
 ## What this is
 
-This is a static snapshot of **Tachylite**, a custom web-based [Obsidian](https://obsidian.md) vault viewer I built for my capstone project.
+This is a static snapshot of **[Tachylite](https://github.com/Jasminestrone/Tachylite)**, a custom web-based [Obsidian](https://obsidian.md) vault viewer I built for my capstone project.
 
 
 ## Two versions

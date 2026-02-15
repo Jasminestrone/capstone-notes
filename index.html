@@ -950,6 +950,17 @@ const newNoteModal = $('#newNoteModal');
 const newNotePath = $('#newNotePath');
 const uploadInput = $('#uploadInput');
 
+// ---------- Server config ----------
+let serverConfig = { allow_edit_all: false, allow_file_creation: true, poll_interval: 15 };
+fetch('/api/config').then(r => r.json()).then(cfg => {
+  serverConfig = cfg;
+  if (!cfg.allow_file_creation) {
+    $('#newNoteBtn').style.display = 'none';
+    $('#uploadBtn').style.display = 'none';
+  }
+  startPolling(cfg.poll_interval || 15);
+}).catch(() => { startPolling(15); });
+
 // ---------- Sidebar toggle ----------
 $('#toggleSidebar').addEventListener('click', () => {
   sidebar.classList.toggle('collapsed');
@@ -2344,7 +2355,7 @@ async function openGraphView() {
 
 // ---------- Download all ----------
 $('#downloadAllBtn').addEventListener('click', () => {
-  window.location.href = 'notes_2026-02-14_18-12-06.zip';
+  window.location.href = 'notes_2026-02-15_14-22-56.zip';
 });
 
 // ---------- Upload ----------
@@ -2383,7 +2394,7 @@ window.addEventListener('popstate', e => {
 document.addEventListener('keydown', e => {
   const mod = navigator.platform.toUpperCase().indexOf('MAC') >= 0 ? e.metaKey : e.ctrlKey;
   // Ctrl/Cmd+N — new note
-  if (false && mod && e.key === 'n' && !editMode) {
+  if (mod && e.key === 'n' && !editMode && serverConfig.allow_file_creation) {
     e.preventDefault();
     newNotePath.value = '';
     newNoteModal.classList.add('visible');
@@ -2518,7 +2529,11 @@ if(false) {
   } catch (e) { /* server unreachable, skip */ }
 }
 
-} // end disabled pollCheck
+function startPolling(seconds) {
+  setInterval(() => {
+    if (!pollPaused) pollCheck();
+  }, seconds * 1000);
+}
 </script>
 </body>
 </html>
