@@ -2228,7 +2228,7 @@ async function openGraphView() {
   }
 }
 $('#downloadAllBtn').addEventListener('click', () => {
-  window.location.href = 'notes_2026-02-16_13-09-20.zip';
+  window.location.href = 'notes_2026-02-16_13-16-30.zip';
 });
 $('#uploadBtn').addEventListener('click', () => uploadInput.click());
 uploadInput.addEventListener('change', async () => {
@@ -2363,7 +2363,7 @@ async function reloadTree() {
 }
 
 async function pollCheck() { return; // disabled in static mode
-if(false) {
+// original body follows (unreachable):
   try {
     const url = '/api/check' + (currentNotePath ? '?note=' + encodeURIComponent(currentNotePath) : '');
     const res = await fetch(url);
