@@ -872,6 +872,16 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
   pointer-events: none;
   filter: drop-shadow(0 1px 3px rgba(100,170,220,0.2));
 }
+.breadcrumb { position: relative; cursor: default; }
+.breadcrumb .last-edited-tip {
+  display: none; position: absolute; top: 100%; left: 0;
+  margin-top: 4px; padding: 4px 10px;
+  background: var(--bg-tertiary); color: var(--text-muted);
+  font-size: 11px; border-radius: 4px; white-space: nowrap;
+  border: 1px solid var(--border-strong);
+  pointer-events: none; z-index: 100;
+}
+.breadcrumb:hover .last-edited-tip { display: block; }
 </style>
 </head>
 <body>
@@ -1117,11 +1127,14 @@ async function loadNote(path, {preserveScroll = false} = {}) {
     contentArea.innerHTML = '<div class="markdown-body">' + titleHtml + data.html + '</div>';
     currentNotePath = resolvedPath;
     currentNoteMtime = data.mtime;
-    if (data.mtime) {
-      const d = new Date(data.mtime * 1000);
-      const fmt = d.toLocaleDateString(undefined, {year:'numeric',month:'short',day:'numeric'}) + ' ' + d.toLocaleTimeString(undefined, {hour:'2-digit',minute:'2-digit'});
-      breadcrumb.title = 'Last edited: ' + fmt;
-    } else { breadcrumb.title = ''; }
+    {
+      let tip = breadcrumb.querySelector('.last-edited-tip');
+      if (!tip) { tip = document.createElement('span'); tip.className = 'last-edited-tip'; breadcrumb.appendChild(tip); }
+      if (data.mtime) {
+        const d = new Date(data.mtime * 1000);
+        tip.textContent = 'Last edited: ' + d.toLocaleDateString(undefined, {year:'numeric',month:'short',day:'numeric'}) + ' ' + d.toLocaleTimeString(undefined, {hour:'2-digit',minute:'2-digit'});
+      } else { tip.textContent = ''; }
+    }
     currentNoteEditable = data.editable || false;
     editMode = false;
     updateTopbar();
@@ -2233,7 +2246,7 @@ async function openGraphView() {
   }
 }
 $('#downloadAllBtn').addEventListener('click', () => {
-  window.location.href = 'notes_2026-02-16_14-49-06.zip';
+  window.location.href = 'notes_2026-02-16_14-53-06.zip';
 });
 $('#uploadBtn').addEventListener('click', () => uploadInput.click());
 uploadInput.addEventListener('change', async () => {
