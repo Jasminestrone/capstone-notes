@@ -1117,6 +1117,11 @@ async function loadNote(path, {preserveScroll = false} = {}) {
     contentArea.innerHTML = '<div class="markdown-body">' + titleHtml + data.html + '</div>';
     currentNotePath = resolvedPath;
     currentNoteMtime = data.mtime;
+    if (data.mtime) {
+      const d = new Date(data.mtime * 1000);
+      const fmt = d.toLocaleDateString(undefined, {year:'numeric',month:'short',day:'numeric'}) + ' ' + d.toLocaleTimeString(undefined, {hour:'2-digit',minute:'2-digit'});
+      breadcrumb.title = 'Last edited: ' + fmt;
+    } else { breadcrumb.title = ''; }
     currentNoteEditable = data.editable || false;
     editMode = false;
     updateTopbar();
@@ -2228,7 +2233,7 @@ async function openGraphView() {
   }
 }
 $('#downloadAllBtn').addEventListener('click', () => {
-  window.location.href = 'notes_2026-02-16_13-29-37.zip';
+  window.location.href = 'notes_2026-02-16_14-49-06.zip';
 });
 $('#uploadBtn').addEventListener('click', () => uploadInput.click());
 uploadInput.addEventListener('change', async () => {
