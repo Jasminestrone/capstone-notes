@@ -43,6 +43,7 @@
 ## Precedents:
 https://github.com/unkyulee/micro-journal
 https://www.advantagemedical.com/products/amrex-lvg325a-low-voltage-galvanic-stimulator/
+https://www.xteink.com/products/xteink-x4
 
 ## Evaluation:
 (first answer is answering on technical minimalism, second is GVS)
@@ -52,17 +53,17 @@ I find myself involved in technical minimalism and wanting to go against the tre
 I don't have a personal connection to this past my interest in tech and advancing fields i see as under researched
 
 ## How could this project expand upon the work you've done so far in your time at NuVu?
-A lot of what I've done at NuVu has been human-centered, but I've never really gone into ECE or bioelectronics. This would be the first time I'm designing something that interacts with the human body directly, sending electrical currents into the mastoid bones to affect the vestibular system. On the minimalism side, I've never built a standalone physical gadget from scratch either, PCB design, enclosures, circuits, all new territory for me. Both directions would push me way outside of what I've done before while still building on the human-centered thinking thats been a throughline in my work.
+This would expand on what I've done in terms of ECE, and mech e, both areas I'm familar with. I've also done a lot of quantitave research, which this would be the natural evolution of.
 
+Past hardware and circuitry, open-sourcing/open hardware is something I'm extremely familiar with. 
 ## How could this project be different from the work that you've already done
 
 For the minimalism angle its building a physical device, not software. Something like a micro-journal or a deliberately "boring" gadget that limits what you can do on purpose. I've done mechanical stuff but not electrical, so this would be a big shift into hardware.
 
-The GVS side is completely different from anything I've done. Bioelectronics, interpreting neuroscience papers, designing something medical-adjacent, and then open-sourcing the whole thing so other people can build on it. None of that overlaps with my previous work at all.
-
+The GVS side is more  different; I havent done. Bioelectronics, interpreting neuroscience papers, or designing something medical-adjacent. 
 ## Originality:
 
-Screen time apps have been tried and most have failed. Light Phone exists, micro-journals exist, but nobody's really approaching it from the angle of "boredom is actually good for you" and building a device around the neuroscience of the Default Mode Network. The originality is in the framing, not restricting phone use but giving people something better, or rather nothing, and making that appealing.
+Screen time apps have been tried and most have failed. Light/e-ink phones exists, micro-journals exist, but less people have really approaching it from the angle of "boredom is actually good for you" and building a device around the neuroscience of the Default Mode Network. The originality is in the framing, not restricting phone use but giving people something better, or rather nothing, and making that appealing.
 
 For GVS, the research isnt new but an affordable open-source nGVS platform does not exist. Everything out there is locked behind expensive clinical setups. The originality is in democratizing access to this underresearched field, and potentially combining nGVS with IMU-based fall detection which hasnt been done in an open source context.
 
@@ -70,23 +71,23 @@ For GVS, the research isnt new but an affordable open-source nGVS platform does 
 
 Every screen time solution out there focuses on restriction, blocking apps, setting timers, making you feel guilty. 80% of gen z cite FOMO and lack of motivation as why they use their phone, you cant just block that away. My approach would be about replacement, giving people something grounded in the research that boredom activates the DMN and drives the introspection gen z is missing out on.
 
-The GVS/nGVS research has been around since the late 90s and was reaffirmed in 2020, but nobody's made it accessible. My work would be different because its focused on getting this into the hands of hobbyists and researchers who dont have clinical budgets, not on publishing another paper.
+The GVS/nGVS research has been around since the late 90s, but nobody's made it accessible. My work would be different because its focused on getting this into the hands of hobbyists and researchers who dont have clinical budgets, not on publishing another paper.
 
 ## Topic restrictions & challenges : Challenges of this choice
 
-Biggest challenge on the minimalism side is that so many apps have tried and failed at this exact problem. I'd need to figure out why and not fall into the same traps, which is a research question in itself.
+Biggest challenge on the minimalism side is that so many apps and devices have tried and failed at this exact problem. I'd need to figure out why and not fall into the same traps, which is a research question in itself.
 
 For GVS, safety is the obvious concern. You're sending electrical currents near the brain, even at low amperage thats not something to take lightly. It needs to be safe by design not just by instruction. Access to testing equipment is limited, access to subjects with vestibular conditions is probably nonexistent. PCB design and bioelectronics are skills I'd need to learn from scratch. 
 
 ## Data Requirements
 
-For minimalism, mostly qualitative. User interviews, surveys about screen time habits and boredom tolerance, existing data like the 14% gen z comfort rate and the 83% who spent zero time relaxing or thinking. If a prototype gets built then usage logs would add a quantitative layer.
+For minimalism, mostly qualitative. User interviews, surveys about screen time habits and boredom tolerance, existing data like the 14% gen z comfort rate and the 83% who spent zero time relaxing or thinking. If a prototype gets built then usage logs would add a quantitative layer!!
 
 For GVS, primarily quantitative. IMU sensor data measuring postural sway, electrical measurements from the device itself, comparing balance metrics with and without nGVS. Published research provides baseline data to benchmark against. Some qualitative stuff too, user comfort, documenting the build process for open source.
 
 ## Methodology Quantitative vs Qualitative
 
-Minimalism leans qualitative, user research, interviews, design iteration, behavioral observation. Some quantitative mixed in, tracking usage time, measuring screen time reduction, before/after surveys on attitudes toward boredom.
+Minimalism is moreso qualitative, user research, interviews, design iteration, behavioral observation. Some quantitative mixed in, tracking usage time, measuring screen time reduction, before/after surveys on attitudes toward boredom.
 
 GVS leans quantitative, measuring electrical output, balance metrics via IMU data, comparing postural sway with and without nGVS. Qualitative elements are there too, user comfort feedback and documentation of the open-source build process, however the core of it is numbers.
 ## Ethics
