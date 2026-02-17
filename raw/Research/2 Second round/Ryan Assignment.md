@@ -123,3 +123,4 @@ For nGVS project I can talk to Sumit Nagpal CEO of Cherish, David Wang, Noelles 
 For technical minimalism i can talk to nuvu people, maybe reach out to some people like the creator of the [microjournal](https://github.com/unkyulee/micro-journal), idk
 
 
+same sources found in [[Research/1 First round/Augmenting Balance via GVS|Augmenting Balance via GVS]] and [[Research/1 First round/The art of boredom|The art of boredom]]
