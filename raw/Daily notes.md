@@ -1,12 +1,14 @@
-### Things I want to do today
+### To do
+ - [ ] 
+### Top priority
+1.
+2.
+3.
+### Done
+-
+### Blockers / waiting on
 - 
-### Things I've done today
+### Notes
 - 
-### What is most important task today?
-1.  
-2. 
-3. 
-
-### Misc
-
+****
 Template [[Daily notes]]

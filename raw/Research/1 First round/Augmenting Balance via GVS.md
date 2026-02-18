@@ -22,4 +22,4 @@ How can we make GVS solutions to Menieres more accessible and open source?
 How can we allow GVS hobbyists to do exeriments of their own4
 
 Recieved [[Research/1 First round/Feedback|Feedback]]
-Sources [[Research/Sources/GVS Balance|GVS Balance]]
+Sources [[GVS Balance Sources|GVS Balance Sources]]

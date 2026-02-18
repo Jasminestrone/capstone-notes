@@ -7,7 +7,7 @@
 2.  Continue productivity stuff (if i need a break)
 ### Misc
 # Day planner
-- [ ] 10 - 11:30 Start Literature review outline
-- [ ] 11:30-12:30 Lunch
-- [ ] 12:30 - 13:20 Literautre review
+- [x] 10 - 11:30 Start Literature review outline
+- [x] 11:30-12:30 Lunch
+- [ ] 12:30 - 13:20 Literautre review outline
 - [ ] 13:30 - 14:20 Calc

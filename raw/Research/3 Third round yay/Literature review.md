@@ -1,9 +1,7 @@
+# Literature review
+## Introduction
 
 
 
-
-
-
-
-
-Based off of [[Research/1 First round/The art of boredom|The art of boredom]], sources [[Research/Sources/Technical Minimalism|Technical Minimalism]], outline [[Literature review outline]], thank you beckett for [[Becketts awesome work]]
+****
+Based off of [[Technical minimalism 1st round|Technical minimalism 1st round]], sources [[Technical Minimalism Sources|Technical Minimalism Sources]], outline [[Literature review outline]], thank you Beckett for [[Beckett's Literature Review]]
