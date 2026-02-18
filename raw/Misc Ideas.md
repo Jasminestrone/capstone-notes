@@ -4,3 +4,4 @@ unkyulee@gmail.com
 
 
 Ideas for [[Technical minimalism 1st round|Technical minimalism 1st round]]
+projects [[The art of boredom]]

@@ -41,6 +41,6 @@
 - Make the case for the project
 
 ****
-Based off of [[Technical minimalism 1st round|Technical minimalism 1st round]], sources [[Technical Minimalism Sources|Technical Minimalism Sources]], precedents [[Precedents]], thank you Beckett for [[Beckett's Literature Review]]
+Based off of [[Technical minimalism 1st round|Technical minimalism 1st round]], sources [[Technical Minimalism Sources|Technical Minimalism Sources]], precedents [[Precedents]], thank you Beckett for [[Beckett's Literature Review]], project [[The art of boredom]]
 ****
 # Footnotes

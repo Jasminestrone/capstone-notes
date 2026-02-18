@@ -9,5 +9,11 @@
 # Day planner
 - [x] 10 - 11:30 Start Literature review outline
 - [x] 11:30-12:30 Lunch
-- [ ] 12:30 - 13:20 Literautre review outline
-- [ ] 13:30 - 14:20 Calc
+- [x] 12:30 - 13:20 Literautre review outline
+- [x] 13:30 - 14:20 Calc
+im going to do some work on [[Research/3 Third round yay/Literature review|Literature review]]
+[[final deliverable]]
+
+****
+Template [[Daily notes]]
+Project [[The art of boredom]]

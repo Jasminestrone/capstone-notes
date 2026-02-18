@@ -14,3 +14,4 @@ We've found a way to elimate boredom completely, to shut off our DMN, and it ste
 
 Recieved [[Research/1 First round/Feedback|]]
 Sources [[Technical Minimalism Sources|Technical Minimalism Sources]]
+Project [[The art of boredom]]

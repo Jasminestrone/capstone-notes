@@ -20,3 +20,4 @@ Professional not academic
 
 
 [[Research/1 First round/Augmenting Balance via GVS|Augmenting Balance via GVS]]
+projects [[The art of boredom]]

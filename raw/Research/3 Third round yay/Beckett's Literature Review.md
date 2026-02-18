@@ -27,3 +27,5 @@ As long as there has been government surveillance, there has been those resistin
 - StingRays are surveillance devices used by the Boston Police Department that can record all data that passes between cell phones and cell towers.
 - American Law enforcement has a troubling history with surveillance and has proven that it cannot be trusted without rigorous oversight that, at the moment, does not exist.
 - Young people have always found ways to circumvent government surveillance and in the age of StingRays, Crocodile Hunter may hold the blueprints to increase privacy.
+
+Thanks beckett for help with [[Literature review]] [[Literature review outline]] [[The art of boredom]]

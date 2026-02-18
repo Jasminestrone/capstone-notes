@@ -124,4 +124,6 @@ For nGVS project I can talk to Sumit Nagpal CEO of Cherish, David Wang, Noelles 
 For technical minimalism i can talk to nuvu people, maybe reach out to some people like the creator of the [microjournal](https://github.com/unkyulee/micro-journal), idk
 
 ****
-sources [[Technical Minimalism Sources]], recieved [[Research/2 Second round/Feedback|Feedback]]]
+sources [[Technical Minimalism Sources]], recieved [[Research/2 Second round/Feedback|Feedback]]
+Seceded by [[Literature review]] [[Literature review outline]]
+Project [[The art of boredom]]]]

@@ -18,3 +18,6 @@ Option 1
 - Don't discount option 2 (digital minimalism) just yet - still a lot of subtopics to explore here
 - Take an inventory of different solutions or products that exist to mitigate digital dependency or addiction - what do they have in common? how are they different? Who do they appeal to or target?
 - Take an inventory of your own digital experiences. Where could you benefit from a device that reduces your digital dependency or connectivity?
+
+Feedback on [[Augmenting Balance via GVS]] [[Technical minimalism 1st round]]
+Project [[The art of boredom]]

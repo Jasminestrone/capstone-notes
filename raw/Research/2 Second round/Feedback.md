@@ -19,3 +19,5 @@
 - can you concretely put to words what you're trying to achieve? this will lead to good questions and understanding of problems in achieving this state? 
 - Look at historic trends in behavior - when/where were people bored in the past? 
 - What about some of mental conditions (i.e. depression, schizophrenia, etc) that stem from issues of the Default Mode Network
+Project [[The art of boredom]]
+Feedback on [[Research Outline]]

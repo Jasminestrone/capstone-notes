@@ -11,3 +11,5 @@ Academic journal
 Opinion piece
 
 Professional not academic
+
+projects [[The art of boredom]]

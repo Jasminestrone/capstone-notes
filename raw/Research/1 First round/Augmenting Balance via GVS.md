@@ -23,3 +23,4 @@ How can we allow GVS hobbyists to do exeriments of their own4
 
 Recieved [[Research/1 First round/Feedback|Feedback]]
 Sources [[GVS Balance Sources|GVS Balance Sources]]
+Project [[The art of boredom]]
