@@ -326,6 +326,27 @@ html, body { height: 100%; background: var(--bg-primary); color: var(--text); fo
 
 .markdown-body .task-list-item { list-style: none; margin-left: -1.5em; }
 
+.markdown-body .footnote {
+  font-size: .85em;
+  color: var(--text-muted);
+  margin-top: 32px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+.markdown-body .footnote hr { display: none; }
+.markdown-body .footnote ol { padding-left: 1.5em; }
+.markdown-body .footnote li { margin-bottom: 4px; line-height: 1.5; }
+.markdown-body .footnote-ref {
+  font-size: .75em;
+  vertical-align: super;
+  line-height: 0;
+  text-decoration: none;
+}
+.markdown-body .footnote-backref {
+  text-decoration: none;
+  margin-left: 4px;
+  font-size: .85em;
+}
 
 .markdown-body pre code .kw, .markdown-body pre .kw { color: #c4a7e7; }
 .markdown-body pre code .st, .markdown-body pre .st { color: #9ccfd8; }
@@ -2246,7 +2267,7 @@ async function openGraphView() {
   }
 }
 $('#downloadAllBtn').addEventListener('click', () => {
-  window.location.href = 'notes_2026-02-19_09-51-23.zip';
+  window.location.href = 'notes_2026-02-19_10-04-06.zip';
 });
 $('#uploadBtn').addEventListener('click', () => uploadInput.click());
 uploadInput.addEventListener('change', async () => {
