@@ -12,4 +12,3 @@
 - 
 ****
 Template [[Daily notes]]
-Project [[The art of boredom]]

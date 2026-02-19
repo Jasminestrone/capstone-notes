@@ -4,6 +4,6 @@
 
 
 ****
-[[Technical minimalism 1st round|Technical minimalism 1st round]]
+[[Research/1 Preliminary/Technical minimalism 1st round|Technical minimalism 1st round]]
 [[Technical Minimalism Sources]]
-[[Literature review]]
+[[Research/3 Literature Review/Literature review]]

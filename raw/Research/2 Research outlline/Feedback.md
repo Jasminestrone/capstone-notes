@@ -20,4 +20,4 @@
 - Look at historic trends in behavior - when/where were people bored in the past? 
 - What about some of mental conditions (i.e. depression, schizophrenia, etc) that stem from issues of the Default Mode Network
 Project [[The art of boredom]]
-Feedback on [[Research Outline]]
+Feedback on [[Research/2 Research outlline/Research Outline]]

@@ -19,5 +19,5 @@ Option 1
 - Take an inventory of different solutions or products that exist to mitigate digital dependency or addiction - what do they have in common? how are they different? Who do they appeal to or target?
 - Take an inventory of your own digital experiences. Where could you benefit from a device that reduces your digital dependency or connectivity?
 
-Feedback on [[Augmenting Balance via GVS]] [[Technical minimalism 1st round]]
+Feedback on [[Research/1 Preliminary/Augmenting Balance via GVS]] [[Research/1 Preliminary/Technical minimalism 1st round]]
 Project [[The art of boredom]]
