@@ -1,7 +1,11 @@
 ### To do
- - [ ] 9-10 Clean up [[Research/3 Literature Review/Literature review outline|Literature review]] 
- - [ ] 10:15AM - 10:30 Meet with ryan
- - [ ] Synthesize feedback 
+ - [x] 9-10 Clean up [[Research/3 Literature Review/Literature review outline|Literature review]] 
+ - [x] 10:15AM - 10:45 Meet with ryan
+ - [x] 10:45-11:30 Synthesize & act on feedback :)
+ - [ ] 12:30PM - 1:30PM act on feedback
+ - [ ] 1:30PM-1:40PM Call CS driving
+ - [ ] 1:45PM-2PM saeed
+ - [ ] 2PM go home
 ### Top priority
 1. Lit review feedback
 2. Advisors brainstorm

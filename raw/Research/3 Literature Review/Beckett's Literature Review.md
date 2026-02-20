@@ -28,4 +28,4 @@ As long as there has been government surveillance, there has been those resistin
 - American Law enforcement has a troubling history with surveillance and has proven that it cannot be trusted without rigorous oversight that, at the moment, does not exist.
 - Young people have always found ways to circumvent government surveillance and in the age of StingRays, Crocodile Hunter may hold the blueprints to increase privacy.
 
-Thanks beckett for help with [[Research/3 Literature Review/Literature review]] [[Research/3 Literature Review/Literature review outline]] [[The art of boredom]]
+Thanks beckett for help with [[Literature Review 1st Draft]] [[Research/3 Literature Review/Literature review outline]] [[The art of boredom]]
