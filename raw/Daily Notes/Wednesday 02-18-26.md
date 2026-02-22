@@ -11,7 +11,7 @@
 - [x] 11:30-12:30 Lunch
 - [x] 12:30 - 13:20 Literautre review outline
 - [x] 13:30 - 14:20 Calc
-im going to do some work on [[Literature Review 1st Draft|Literature Review 1st Draft]]
+im going to do some work on [[Literature Review|Literature Review 1st Draft]]
 [[final deliverable]]
 
 ****

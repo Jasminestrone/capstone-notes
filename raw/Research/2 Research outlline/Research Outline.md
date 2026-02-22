@@ -125,5 +125,5 @@ For technical minimalism i can talk to nuvu people, maybe reach out to some peop
 
 ****
 sources [[Technical Minimalism Sources]], recieved [[Research/2 Research outlline/Feedback|Feedback]]
-Seceded by [[Literature Review 1st Draft]] [[Research/3 Literature Review/Literature review outline]]
+Seceded by [[Literature Review]] [[Research/3 Literature Review/Literature review outline]]
 Project [[The art of boredom]]]]

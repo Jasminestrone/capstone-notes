@@ -1,4 +1,4 @@
-Feedback [[Literature Review 1st Draft]] and [[Advisors]]
+Feedback [[Literature Review]] and [[Advisors]]
 **Updates**:
 
 - Boredom - Default Mode Network
