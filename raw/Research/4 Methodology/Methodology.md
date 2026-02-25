@@ -1,18 +1,22 @@
 This project educates gen z about the importance of boredom, and provides a open source medium in which to experience it.
 
-I have experience in rhino, more experience in open source
-I'd like to develop my fusion skills a lot more
+Skills I have
+Open source, interviewing, surveys, Rhino, cad intuition
 
+Skills I want to develop
+Open hardware, Fusion, ECE.
 
-| Milestone | Title                                    | Description                                                                                                |
-| --------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| 1         | Research/interviews                      | Talk to my advisors and users, build a solid base for the project.                                         |
-| 2         | Sketching + light modeling of looks like | Get ~5 ideas for how this project could be implemented                                                     |
-| 3         | Works like prototypes                    | Create a works like prototype with electronics done                                                        |
-| 4         | Model a complete prototype               | Model a prototype with all components from the works like in the styles of the looks like                  |
-| 5         | User testing                             | Look to users for material choice, final say in some shaping choices                                       |
-| 6         | Final prototype                          | Create final prototype                                                                                     |
-| 7         | Complete open source                     | Publish comprehensive readme, as well as all of my obsidian notes, in addition to the readme create docs ? |
+Industrial design SLIGHTLY changed
+
+| Milestone | Title                                          | Description                                                                                                |
+| --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| 1         | Research/interviews                            | Talk to my advisors and users, build a solid base for the project.                                         |
+| 2         | Sketching + light modeling of looks like       | Get ~5 ideas for how this project could be implemented                                                     |
+| 3         | Works like prototypes+looks like in more depth | Create a works like prototype with electronics done                                                        |
+| 4         | Model a complete prototype                     | Model a prototype with all components from the works like in the styles of the looks like                  |
+| 5         | User testing                                   | Look to users for material choice, final say in some shaping choices                                       |
+| 6         | Final prototype                                | Create final prototype                                                                                     |
+| 7         | Complete open source                           | Publish comprehensive readme, as well as all of my obsidian notes, in addition to the readme create docs ? |
 Final deliverables
 - Final physical model
 - Renderings/diagrams/comprehensive presentation
@@ -105,7 +109,6 @@ Final deliverables
 ## Methodology
 
 ### Research problem
-
 83% of Gen Z reports spending zero time "relaxing or thinking" in the past 24 hours. The default mode network, the part of the brain responsible for self-reflection, creativity, and life planning, needs idle time to function. Smartphones have eliminated idle time. While existing solutions to decreasing function all rely on restriction, this project would instead give you something else to do. Can a physical open-source device make doing nothing worth doing.
 ### Process approach
 This project follows an industrial design process similar to what the Tangara, Micro-journal, and Xteink X4 teams used to develop their deliberately limited devices. Each of those projects went through cycles of research, prototyping, user feedback, and refinement.
