@@ -1,18 +1,8 @@
-David Wang/associates ?
-
 Reach out to the creator of the micro journal, 
 https://github.com/unkyulee?tab=repositories
 unkyulee@gmail.com
 
-Akshay may recommend professors from WPI ?
-
 Reach out to Beckett to see if theres any professors that might be open to this
-
-Reach out to Kait to see MIT professors/researchers as well
-
-https://www.linkedin.com/in/heatherreadconnecticut/ shes connected with saeed ?
-
-Cal newport would be AWESOME but idk about that
 
 Jamie Shushan  (family friend)
 - Qualifications
@@ -23,7 +13,11 @@ Jamie Shushan  (family friend)
 	- Published author (The pocket guide to college success)
 - What can she do for the project?
 	- Offer her knowledge she gained working with high schoolers going to college behaviorally
-
 Megan Reitz
 - Spaciousness book
-- Could reach out to her
+- Could reach out to her 
+Sherry terkel
+- Alone together
+	- talking about device usage in teens/adults
+	- Long term adverse effects of technology
+- sturkle@media.mit.edu

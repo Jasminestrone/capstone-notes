@@ -1,6 +1,7 @@
 ### To do
  - [ ] Completely mega finalize methodology and background
  - [ ] Desk crit with ryan and akshay
+ - [ ] Draft emails to advisors
 ### Top priority
 1. Methodology
 2. Background

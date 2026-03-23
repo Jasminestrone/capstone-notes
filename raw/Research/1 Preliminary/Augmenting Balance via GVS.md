@@ -21,6 +21,6 @@ How can we augment and enhance balance with technology?
 How can we make GVS solutions to Menieres more accessible and open source?
 How can we allow GVS hobbyists to do exeriments of their own4
 
-Recieved [[Research/1 Preliminary/Feedback|Feedback]]
+Recieved [[2-12-26 Feedback|2]]
 Sources [[GVS Balance Sources|GVS Balance Sources]]
 Project [[The art of boredom]]
