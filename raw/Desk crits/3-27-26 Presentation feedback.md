@@ -1,0 +1,8 @@
+- gadget might inherently engage you, contradicts the goal of creating boredom, need a solid answer for this
+- framing + topic feel relevant and timely
+- let research drive the design, not the other way around (co-design approach)
+- ground the device concept in the neuroscience first, what conditions actually produce boredom, then design from there
+- pair the device with intentional use rules/prompts so people know when + how to use it
+- self-reflection and thinking prompts worth exploring as a direction (bullet journaling came up as adjacent)
+- dumb phones, lockbox apps etc already exist, differentiation needs to be clear, prompt/reflection angle might be the gap
+- megan reitz call is the right next step, spaciousness framework directly relevant

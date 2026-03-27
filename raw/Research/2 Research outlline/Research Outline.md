@@ -53,7 +53,7 @@ I find myself involved in technical minimalism and wanting to go against the tre
 I don't have a personal connection to this past my interest in tech and advancing fields i see as under researched
 
 ## How could this project expand upon the work you've done so far in your time at NuVu?
-This would expand on what I've done in terms of ECE, and mech e, both areas I'm familar with. I've also done a lot of quantitave research, which this would be the natural evolution of.
+This would expand on what I've done in terms of ECE, and mech e, both areas I'm familar with. I've also done a lot of quantitative research, which this would be the natural evolution of.
 
 Past hardware and circuitry, open-sourcing/open hardware is something I'm extremely familiar with. 
 ## How could this project be different from the work that you've already done
