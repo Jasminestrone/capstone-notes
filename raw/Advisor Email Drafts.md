@@ -86,3 +86,12 @@ Jasmine Horowitz
 1. In *Alone Together* you describe how devices changed the texture of daily life — do you think the problem has gotten qualitatively worse with short-form video (TikTok, Reels) compared to earlier smartphones, and if so, why?
 2. My research found that restriction-based solutions (screen time apps, app blockers, nudge timers) have largely failed to produce lasting behavior change. Do you think the solution needs to come from product design, from culture, or from something else entirely?
 3. I'm arguing that the answer is not restricting phone use but giving boredom a compelling alternative — a device that makes doing nothing feel worth doing. Does that framing resonate with your thinking, or do you see risks in that approach?
+
+---
+## Related
+
+[[Potential Advisors]]
+[[Jamie Shushan Call Questions]]
+[[Jamie Shushan — Call Summary]]
+[[Jamie call notes]]
+[[Un Kyu Lee Questions]]

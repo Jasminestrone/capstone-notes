@@ -17,3 +17,9 @@
 	- Phone case that has your phone covered in its default state with a simple question that prompts introspection ontop of it, in order to use your phone you have to really know you want to open the door and this ensures that you're not just mindlessly opening your phone for no reason
 ****
 Template [[Daily notes]]
+
+---
+## Related
+
+[[Final proposal]]
+[[Misc Ideas]]

@@ -42,3 +42,11 @@
 ---
 ## Other Notes
 >
+
+---
+## Related
+
+[[Jamie call notes]]
+[[Jamie Shushan — Call Summary]]
+[[Advisor Email Drafts]]
+[[Potential Advisors]]

@@ -18,3 +18,9 @@
 - 
 ****
 Template [[Daily notes]]
+
+---
+## Related
+
+[[Literature Review]]
+[[2-19-26 Feedback]]

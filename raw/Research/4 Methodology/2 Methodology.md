@@ -87,3 +87,10 @@ Creation
 
 Writing part
 
+---
+## Related
+
+[[Research/4 Methodology/Methodology|Methodology]]
+[[Research Outline]]
+[[Literature Review]]
+[[Final proposal]]

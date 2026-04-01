@@ -5,3 +5,10 @@ ensure the goal of the project is to stay on track with small incremental change
 brush up on proposal
 
 really trust the process and be thorough in my research
+
+---
+## Related
+
+[[2-25-26 Feedback]]
+[[3-27-26 Presentation feedback]]
+[[03-23-26 Monday]]

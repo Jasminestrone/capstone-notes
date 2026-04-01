@@ -14,3 +14,11 @@
 - 
 ****
 Template [[Daily notes]]
+
+---
+## Related
+
+[[Final proposal]]
+[[2-25-26 Feedback]]
+[[Potential Advisors]]
+[[Advisor Email Drafts]]

@@ -22,3 +22,11 @@ Final deliverables
 - Renderings/diagrams/comprehensive presentation
 - Open source docs completely published
 
+---
+## Related
+
+[[2 Methodology]]
+[[Research Outline]]
+[[Literature Review]]
+[[Final proposal]]
+[[Research/5 Final/Methodology|Final Methodology]]

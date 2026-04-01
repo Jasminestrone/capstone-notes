@@ -91,3 +91,16 @@ These "boring gadgets" share a philosophy of doing less on purpose, and they are
 [^24]: "Dual-mode social media interface research," *arXiv*, 2024. https://arxiv.org/abs/2503.21195
 
 [^25]: Pascal, B., *Pensées*, Fragment 139 ("Diversion"), 1670. Translated by A.J. Krailsheimer, Penguin Classics, 1966. ISBN: 9780140446456.
+
+---
+## Related
+
+[[Research Outline]]
+[[Technical minimalism 1st round]]
+[[Final proposal]]
+[[Capstone Literary Review]]
+[[Appendix]]
+[[Research/5 Final/Methodology|Final Methodology]]
+[[30 Second Pitch]]
+[[Design for behavioral change]]
+[[Precedents]]

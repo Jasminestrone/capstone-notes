@@ -5,7 +5,7 @@
 - Wants to make a hardware product/device
 - After doing research into the history of boredom
 	- Boredom used to just be a part of life. Now, it seems scary.  
-[[Potential Advisors]]  
+[[Research/5 Final/Potential Advisors]]  
 - Jamie Shushan (research into productivity and boredom at Harvard)
 - Megan Reitz (Writes about "Spaciousness", similar to ideas of boredom) 
 - CMU design research professors? 
@@ -15,4 +15,14 @@
 - Overall, collect data from your audience
 - Make a good case for boredom 
 - Why is boredom seen as scary? Investigating that in more depth may help form a device to make users more comfortable with "boredom".  
-- 
+-
+
+---
+## Related
+
+[[2-19-26 Feedback]]
+[[3-23-26 Feedback]]
+[[Literature Review]]
+[[Final proposal]]
+[[Potential Advisors]]
+[[Cultural Probe Kit]]

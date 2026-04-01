@@ -16,3 +16,9 @@ im going to do some work on [[Literature Review|Literature Review 1st Draft]]
 
 ****
 Template [[Daily notes]]
+
+---
+## Related
+
+[[Literature Review]]
+[[Research Outline]]

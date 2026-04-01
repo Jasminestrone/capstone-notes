@@ -56,3 +56,11 @@ She wants to help but wants to ensure that she would be helpful she would be hon
 
 we could schedule week by week and just see how it goes as it goes
 
+---
+## Related
+
+[[Jamie Shushan Call Questions]]
+[[Jamie Shushan — Call Summary]]
+[[Potential Advisors]]
+[[Literature Review]]
+[[Advisor Email Drafts]]

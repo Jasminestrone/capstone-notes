@@ -22,5 +22,13 @@ How can we make GVS solutions to Menieres more accessible and open source?
 How can we allow GVS hobbyists to do exeriments of their own4
 
 Recieved [[2-12-26 Feedback|2]]
-Sources [[GVS Balance Sources|GVS Balance Sources]]
+Sources [[Research/10 Sources/GVS Balance Sources|GVS Balance Sources]]
 Project [[The art of boredom]]
+
+---
+## Related
+
+[[GVS Balance Sources]]
+[[Research Outline]]
+[[2-12-26 Feedback]]
+[[2-17-26 Feedback]]

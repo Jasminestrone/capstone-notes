@@ -13,3 +13,9 @@
 - Went home today, only got done meeting Un Kyu Lee
 ****
 Template [[Daily notes]]
+
+---
+## Related
+
+[[Un Kyu Lee Questions]]
+[[Misc Ideas]]

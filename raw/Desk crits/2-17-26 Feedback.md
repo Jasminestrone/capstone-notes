@@ -21,3 +21,11 @@
 - What about some of mental conditions (i.e. depression, schizophrenia, etc) that stem from issues of the Default Mode Network
 Project [[The art of boredom]]
 Feedback on [[Research/2 Research outlline/Research Outline]]
+
+---
+## Related
+
+[[2-12-26 Feedback]]
+[[2-19-26 Feedback]]
+[[Augmenting Balance via GVS]]
+[[Technical minimalism 1st round]]

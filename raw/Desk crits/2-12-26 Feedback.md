@@ -21,3 +21,10 @@ Option 1
 
 Feedback on [[Research/1 Preliminary/Augmenting Balance via GVS]] [[Research/1 Preliminary/Technical minimalism 1st round]]
 Project [[The art of boredom]]
+
+---
+## Related
+
+[[Augmenting Balance via GVS]]
+[[Technical minimalism 1st round]]
+[[2-17-26 Feedback]]

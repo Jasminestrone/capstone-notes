@@ -127,3 +127,14 @@ Skills I'm developing through this project: open hardware design (PCB layout, co
 | **Total estimate** | **$110–210** |
 
 Costs are kept low by using off-the-shelf modules rather than custom silicon, which also makes the design more reproducible for anyone building from the open-source files.
+
+---
+## Related
+
+[[Literature Review]]
+[[Research/4 Methodology/Methodology|Methodology (Draft)]]
+[[2 Methodology]]
+[[Final proposal]]
+[[Research Outline]]
+[[Cultural Probe Kit]]
+[[Interview Guide]]

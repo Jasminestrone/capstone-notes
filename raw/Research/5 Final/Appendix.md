@@ -65,3 +65,10 @@ Desired outcomes
 [^21]: Rigotti, N. A., Kruse, G. R., Livingstone-Banks, J., & Hartmann-Boyce, J., "Treatment of Tobacco Smoking: A Review," *JAMA*, vol. 327, no. 6, pp. 566–577, 2022. https://doi.org/10.1001/jama.2022.0395
 
 [^22]: Gainsbury, S. M., "Review of Self-exclusion from Gambling Venues as an Intervention for Problem Gambling," *Journal of Gambling Studies*, vol. 30, no. 2, pp. 229–251, 2014. https://doi.org/10.1007/s10899-013-9362-0. See also: Neophytou, K. et al., "Gambling to escape: A systematic review of the relationship between avoidant emotion regulation/coping strategies and gambling severity," *Journal of Contextual Behavioral Science*, vol. 27, pp. 126–142, 2023. https://doi.org/10.1016/j.jcbs.2023.01.004
+
+---
+## Related
+
+[[Literature Review]]
+[[Capstone Literary Review]]
+[[Final proposal]]

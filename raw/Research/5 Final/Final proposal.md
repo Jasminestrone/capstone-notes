@@ -291,3 +291,13 @@ Desired outcomes
   
 
 [^25]: Pascal, B., *Pensées*, Fragment 139 ("Diversion"), 1670. Translated by A.J. Krailsheimer, Penguin Classics, 1966. ISBN: 9780140446456.
+
+---
+## Related
+
+[[Literature Review]]
+[[Research/5 Final/Methodology|Final Methodology]]
+[[Potential Advisors]]
+[[30 Second Pitch]]
+[[Research Outline]]
+[[Appendix]]

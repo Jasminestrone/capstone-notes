@@ -55,3 +55,10 @@ What right now may you change about the device
 
 People are lookign for single purpose devices and that aligns with my idea, one other angel he wants to give, is  psychoglocailly, there can be different type of people, when theyre anxious and when their reaction is to act, lets say he came home and the first thing he does is clean and continue to find chores, everything is done and clean hed still feel slightly anxious hed keep finding things to do, people who do things to find a solution. some people gets into a room and just do nothing and think, they move minimally, just sit down and think and thats how they deal with anxiety, it could be the character of the person that would lead to boredom, there can be a group of people that behave kooking for single purpose devices because they deal with anxiety in a different way, so maybe the environment induces a lot of anxiety and its hard to get out. thats another angel
 
+---
+## Related
+
+[[Advisor Email Drafts]]
+[[Potential Advisors]]
+[[Precedents]]
+[[30 Second Pitch]]

@@ -14,3 +14,12 @@ I propose that the answer is not in restricting phone use, but in reclaiming bor
 
 ### Questions
 Is there anyone you could get me in contact with that could help
+
+---
+## Related
+
+[[Research Outline]]
+[[Technical minimalism 1st round]]
+[[Literature Review]]
+[[Final proposal]]
+[[The art of boredom]]

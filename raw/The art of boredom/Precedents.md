@@ -7,3 +7,11 @@ Microjournal is an open source open hardware journal, different itterations cont
 ****
 [[Deliverables]]
 [[The art of boredom]]
+
+---
+## Related
+
+[[The art of boredom]]
+[[Deliverables]]
+[[Literature Review]]
+[[Technical Minimalism Sources]]

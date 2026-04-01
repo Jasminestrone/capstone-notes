@@ -52,3 +52,11 @@
 ## Follow-Up
 - [ ] She mentioned sharing their program's **phone policies** — ask for those
 - [ ] Schedule first weekly check-in
+
+---
+## Related
+
+[[Jamie call notes]]
+[[Jamie Shushan Call Questions]]
+[[Potential Advisors]]
+[[Advisor Email Drafts]]

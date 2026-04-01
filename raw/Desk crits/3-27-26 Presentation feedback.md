@@ -6,3 +6,13 @@
 - self-reflection and thinking prompts worth exploring as a direction (bullet journaling came up as adjacent)
 - dumb phones, lockbox apps etc already exist, differentiation needs to be clear, prompt/reflection angle might be the gap
 - megan reitz call is the right next step, spaciousness framework directly relevant
+
+---
+## Related
+
+[[3-23-26 Feedback]]
+[[3-30-26 Feedback]]
+[[03-27-26 Friday]]
+[[Literature Review]]
+[[Precedents]]
+[[Jamie Shushan — Call Summary]]

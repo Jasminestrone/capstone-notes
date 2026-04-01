@@ -21,3 +21,11 @@ Sherry terkel
 	- talking about device usage in teens/adults
 	- Long term adverse effects of technology
 - sturkle@media.mit.edu
+
+---
+## Related
+
+[[Advisor Email Drafts]]
+[[Jamie Shushan — Call Summary]]
+[[Un Kyu Lee Questions]]
+[[Final proposal]]

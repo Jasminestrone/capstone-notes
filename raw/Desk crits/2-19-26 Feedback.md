@@ -1,4 +1,4 @@
-Feedback [[Literature Review]] and [[Potential Advisors]]
+Feedback [[Literature Review]] and [[Research/5 Final/Potential Advisors]]
 **Updates**:
 
 - Boredom - Default Mode Network
@@ -13,3 +13,12 @@ Feedback [[Literature Review]] and [[Potential Advisors]]
 - Look into the sub-domain of "Design for Behavior Change" - what motivates people to alter their habits and make long term changes? 
     - Can you include some analysis of precedents that solve for behavior change? (i.e. smoking/gambling/addictive behaviors in general). 
 - Can you make the working proposal into a Google doc and add us (Ryan/Akshay as editors)?
+
+---
+## Related
+
+[[2-17-26 Feedback]]
+[[2-25-26 Feedback]]
+[[Literature Review]]
+[[Design for behavioral change]]
+[[Potential Advisors]]

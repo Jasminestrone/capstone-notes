@@ -13,5 +13,14 @@ We've found a way to elimate boredom completely, to shut off our DMN, and it ste
 - Why have so many screentime limiting apps failed
 
 Recieved [[2-12-26 Feedback]]
-Sources [[Technical Minimalism Sources|Technical Minimalism Sources]]
+Sources [[Research/10 Sources/Technical Minimalism Sources|Technical Minimalism Sources]]
 Project [[The art of boredom]]
+
+---
+## Related
+
+[[Technical Minimalism Sources]]
+[[Literature Review]]
+[[Research Outline]]
+[[2-12-26 Feedback]]
+[[30 Second Pitch]]
