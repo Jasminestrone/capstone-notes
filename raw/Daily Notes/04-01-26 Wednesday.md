@@ -12,6 +12,6 @@
 ### Blockers / waiting on
 - 
 ### Notes
-- 
+
 ****
-Template [[Daily notes]]
+Template [[_site/raw/Daily notes]]

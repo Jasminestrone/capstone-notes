@@ -12,7 +12,7 @@
 - Not feeling too great physically
 - Went home today, only got done meeting Un Kyu Lee
 ****
-Template [[Daily notes]]
+Template [[_site/raw/Daily notes]]
 
 ---
 ## Related

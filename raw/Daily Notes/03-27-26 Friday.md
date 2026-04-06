@@ -12,7 +12,7 @@
 ### Notes
 - 
 ****
-Template [[Daily notes]]
+Template [[_site/raw/Daily notes]]
 
 ---
 ## Related

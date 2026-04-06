@@ -1,0 +1,5 @@
+# Otto Pilot 
+Otto uses their phone a lot but feels mostly in control, when they are bored they typically reach for their phone, not because of anxiety just out of pure habit. They have great ideas in the shower and before they sleep, in moments where phones are by default restricted. Otto has tried screen time limiters, all around they haven't really worked, their screen time is 2-4 hours, their barrier is more mechanical and habit based then emotional.
+
+# Em Otionally
+Em Uses phone more then they're comfortable with and find it very hard to stop. When boredom hits, they feel mildly to very uncomfortable, they try to escape it as fast as possible. FOMO, anxiety about separation from their phone, and comfort in scrolling all stack together as barriers to stopping. Person 2 is most likely to spiral if alone with their thoughts. Lacking a direction in life "fairly often" They've thought about cutting back but haven't committed.

@@ -1,0 +1,1 @@
+{"html": "", "path": "Templates/<% tp.date.now(\"YYYY-MM-DD-dddd\", 1) %>.md", "name": "<% tp.date.now(\"YYYY-MM-DD-dddd\", 1) %>", "mtime": 1771422938.7758875, "editable": false}

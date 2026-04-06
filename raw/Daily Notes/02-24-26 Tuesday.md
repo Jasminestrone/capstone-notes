@@ -13,4 +13,4 @@ I didnt do anything yesterday so I'm going to catch up on work today :)
 ### Notes
 - 
 ****
-Template [[Daily notes]]
+Template [[_site/raw/Daily notes]]

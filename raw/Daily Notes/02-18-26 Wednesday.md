@@ -1,7 +1,7 @@
 ### Things I want to do today
 - Create my [[Research/3 Literature Review/Literature review outline]] as well as increase organization 
 ### Things I've done today
-- Make a day planner ([[Daily notes]]), theme better, and hide unessesary folders from my view and obsidians view 
+- Make a day planner ([[_site/raw/Daily notes]]), theme better, and hide unessesary folders from my view and obsidians view 
 ### What is most important task today?
 1.  Literature review
 2.  Continue productivity stuff (if i need a break)
@@ -15,7 +15,7 @@ im going to do some work on [[Literature Review|Literature Review 1st Draft]]
 [[final deliverable]]
 
 ****
-Template [[Daily notes]]
+Template [[_site/raw/Daily notes]]
 
 ---
 ## Related

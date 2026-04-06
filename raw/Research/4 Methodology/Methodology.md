@@ -25,7 +25,7 @@ Final deliverables
 ---
 ## Related
 
-[[2 Methodology]]
+[[Research/4 Methodology/2 Methodology]]
 [[Research Outline]]
 [[Literature Review]]
 [[Final proposal]]

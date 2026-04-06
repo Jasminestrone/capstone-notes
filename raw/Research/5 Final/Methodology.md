@@ -133,7 +133,7 @@ Costs are kept low by using off-the-shelf modules rather than custom silicon, wh
 
 [[Literature Review]]
 [[Research/4 Methodology/Methodology|Methodology (Draft)]]
-[[2 Methodology]]
+[[Research/4 Methodology/2 Methodology]]
 [[Final proposal]]
 [[Research Outline]]
 [[Cultural Probe Kit]]
