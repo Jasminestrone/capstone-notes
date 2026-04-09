@@ -1,0 +1,13 @@
+**Updates**:
+- Advisor (Megan) meeting was productive: 
+    - spoke about "speed-bumps" that disrupt getting stuck in loops
+    - conflict about need for productivity and dopamine hits
+    - boredom - internal existential questions are uncomfortable 
+- Continuing to develop a cultural probe assignment:
+    - Journaling boredom - date, time, duration, context, etc 
+        - Can you also collect some visual info (i.e. sketch, photo?)
+        - Have responses by Friday (digital and physical)
+        - Consider how that material is packaged and delivered
+- Still working on interview prep:
+    - Needs to schedule and coordinate this week
+- Need to have design guidelines/principles/manifesto determined before transitioning to sketching/prototyping.

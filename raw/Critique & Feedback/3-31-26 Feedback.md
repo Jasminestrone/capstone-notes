@@ -31,5 +31,5 @@ read more into behavioral change
 
 [[3-30-26 Feedback]]
 [[Cultural Probe Kit]]
-[[Interview Guide]]
+[[Meetings/Student Interviews/Interview Guide]]
 [[Literature Review]]

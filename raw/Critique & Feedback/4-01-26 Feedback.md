@@ -26,5 +26,5 @@
 ## Related
 
 [[3-31-26 Feedback]]
-[[Interview Guide]]
+[[Meetings/Student Interviews/Interview Guide]]
 [[Cultural Probe Kit]]

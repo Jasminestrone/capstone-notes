@@ -77,7 +77,7 @@ Looking at this past week: when did your mind feel most free? What were the cond
 ---
 ## Related
 
-[[Interview Guide]]
+[[Meetings/Student Interviews/Interview Guide]]
 [[Research/5 Final/Methodology|Final Methodology]]
 [[Literature Review]]
 [[3-30-26 Feedback]]

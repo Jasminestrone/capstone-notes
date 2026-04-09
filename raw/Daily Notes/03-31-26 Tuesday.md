@@ -17,6 +17,6 @@ Template [[_site/raw/Daily notes]]
 ---
 ## Related
 
-[[Interview Guide]]
+[[Meetings/Student Interviews/Interview Guide]]
 [[Cultural Probe Kit]]
 [[3-31-26 Feedback]]

@@ -1,0 +1,108 @@
+# Munther — Interview Notes
+**Age:** 17 | **Date:** 2026-04-08
+Synthesized from [[Munther Meeting Notes Raw]], [[Munther Meeting Notes Raw 2]], [[Munther Meeting Notes Raw 3]]
+
+---
+
+## Section 1: Daily Life & Phone
+
+**Morning routine.** Ideal morning: up at 6 AM, movement, water, skincare, workout, personal project or study work (heavy reading, information consumption), dressed and out by 7:30, arrives around 8:15 with high energy. He uses spaced repetition later in the day to revisit morning material. When the routine breaks, it's a 6–7 AM gamble, and the ripple effects go beyond being late. It messes up his energy, creativity, and his ability to function across all areas of life, not just work and school.
+
+**Phone timing.** Mostly midday, right before sleep, and right when waking up, he calls those "the worst times to use it." His peak productive windows (morning, late night) are the times he's least likely to have the phone on him. He's noticed this pattern and has strong intuitions about why, even if he can't fully explain the mechanism. There's more of a contextual *pull* to the device than a fixed schedule.
+
+**His framing of the phone.** "A black box that's made to distract me from getting anything done anywhere and just continuously stare at it." He's existentially aware of the time it takes. ADHD is a factor his dopamine cycle means he needs very strong structure, a lucky environment, or zero distractions, and those conditions almost never arrive naturally. The biggest challenge has been building internal tools and systems, which he describes as "extremely hard" and still unfinished.
+
+---
+
+## Section 2: Boredom
+
+**What it feels like.** "Emptiness, but it has some form." Boredom is his *default state* — the baseline his brain returns to. But it's not purely negative: when bored, "there's potential energy in my brain." It's when the biggest flood of new ideas comes, when things recombine differently, when daydreaming is strongest and he can approach things from new angles. He's made peace with the duality.
+
+**Physical location.** He feels boredom in his head. Environment shapes it strongly — he's much less bored somewhere with sensory richness or emotional meaning. Context matters as much as content.
+
+**The reflex.** Sitting alone with nothing to do — first impulse is the phone, immediately. After that, if there's nothing there either, his brain starts scanning for activities: things to do, things that need doing, things he wants. There's also an impulsive stream based on whatever's physically around him.
+
+---
+
+## Section 3: Idle Mind
+
+**Most free when walking.** Immediate, no-hesitation answer. Sitting + boredom don't combine — he gets restless, not reflective. But when his body is moving: "I never really notice my own thoughts as strongly as when my body's in movement, because I get that separation." Walking creates an internal/external split that makes his own thinking visible to him.
+
+**Missing time to think.** One of the richest parts of the conversation:
+
+> "Not only am I missing time to think about bigger things — I'm missing time to think about smaller things that day-to-day make my life enjoyable. I'm just missing the time to think in the first place."
+
+> "The time of being able to have clear free thinking is one of the most important resources that we have. We don't have any other faculties to be able to deal with the world, especially how complicated it is now — it's only going to get more complicated. So we only need more clarity and more freedom to be able to react creatively."
+
+Technology doesn't just crowd out existential thinking — it makes it harder to *stay* in that headspace without "succumbing to existential fears." He estimated 30–40% of a teenager's day is consumed by content (social media, friend-forwarded stuff, online interactions), and called the online world "the most dominant force affecting how kids think, act, and feel throughout the day." Identity and behavior — social, academic — are now structured around those systems.
+
+---
+
+## Section 4: Existing Solutions
+
+**What made him want to change.** Two things. First, the practical: looked at his screen time, calculated the time and money lost. Second, and more personal: realized phone use was pulling him out of "higher faculties" — he was neglecting things foundational to his identity. He mentioned consistently following through on things he cares about, and maintaining what he called "moral integrity": doing things he previously would have considered wrong, making mistakes due to lapses in judgment. He was careful to say the phone didn't cause these, but that dopamine and eroded self-control *accelerated* them. He described the phone as "literally designed to make your mind as addicted to it as possible" and called that "malicious."
+
+> "The biggest thing we can gain out of understanding our relationship with technology is realizing how much it's shaping us internally and externally."
+
+**What he tried, in practice:**
+
+1. **Screen time blockers** — worked for a bit. Helped when he was trying to build study consistency in more advanced subjects. Reduced usage reliably for a while.
+
+2. **Scheduled phone windows** — the most effective thing he tried. Locking the phone to certain times of day meant it was expected and contained, not constantly available. His insight: *"Why do we even use our phones? It's because it's easy and accessible — it's quick information you can just digest and feel good about without ever processing. That's the worst thing for a person trying to develop themselves."*
+
+3. **Restructuring the phone ecosystem** — tried to build a system around which apps, when, and how. Acknowledged the core problem: there are no good tools for making the *social environment* change. If everyone around you is satisfying their social, intellectual, and existential needs shallowly through the phone, you can't get what you need from people even if you put yours away. He called this a "spiritual and existential" problem, not just a social one.
+
+4. **Nature and physical disconnection** — mentioned as something that actually works. Being disconnected from society helps disconnect from technology. Didn't elaborate much but flagged it as real.
+
+**Where things broke down — three specific failures:**
+
+- **Sophomore year.** Under pressure from college admissions and grades, he made social media extremely hard to access — many friction layers. It worked in one sense, but it disconnected him from his social circle, which burned him out *more*. His conclusion: *"The only way for me to get away from something so addicting was isolation — and that's what perpetuates the cycle for me the most."* He was pulled back in by social needs, which then re-addicted him to the device as the tool for meeting those needs. Screen time actually went up afterward.
+
+- **Summers.** When there's nothing structured to do, the phone grabs hardest. "When I don't have anything to do, that's when it starts to grasp me the most." Fulfillment from other activities is his most reliable protection — without it, the cycle restarts.
+
+- **The hyper-optimized system.** At some point he built an extremely ambitious self-management framework — exact attention span windows, bandwidth calculations, full lifestyle optimization. It failed because of diminishing returns, and because it left no space. His reflection on this was sharp:
+
+> "Being able to sit and not be constantly searching for something is a skill in itself. And the phone is the opposite of that — it causes your brain to just keep looping and looping, looking for more and more, instead of being present with where you are."
+
+**The DoorDash insight.** An unexpected but interesting thread: he thinks delivery apps (DoorDash, Uber Eats) are an underrated part of the phone addiction cycle that people don't talk about. You scroll Instagram for three hours, get hungry, order food because it's the easiest thing — and that keeps you in the loop of worse health, lower expectations for yourself, less self-trust. Everything is connected; the phone's pull isn't just about social media.
+
+**Why social is the hardest wall.** He thinks this is probably true for a significant portion of the population, not just him. The social binding is what makes individual interventions insufficient.
+
+---
+
+## Section 5: Concept Reaction
+
+*Not captured in any transcript.*
+
+---
+
+## Closing — His Addition
+
+He wants interviewers to ask people how they feel about their phone *as a physical object*. His reasoning: when someone loses their phone, their heart drops — and it's not just because it's a communication tool. Cards, photos, phone numbers, life-critical information, day-to-day decision-making infrastructure. All of it lives there.
+
+> "An iPhone becomes an iPhone with a capital I — where your phone becomes you, and you kind of become fused with it in a way."
+
+He ended with a framing he thinks is the most important question for understanding someone's relationship with technology:
+
+> "Is it a tool — genuinely, where you're using it to improve or automate aspects of your life that you'd rather not do? Or is it an escape — something you use to take yourself away from the things that are really important? And sometimes that hurts, because people stay in comfortable places more than they want to look for new beginnings."
+
+---
+
+## Observations & Quotes to Preserve
+
+- **"Potential energy in my brain"** — his phrase for the productive upside of boredom. Worth lifting into project framing.
+- **"I get that separation"** — what walking gives him. Movement creates the split that makes his own thoughts audible.
+- **"Clear free thinking is one of the most important resources we have"** — said as a conviction, not a response.
+- **"Being able to sit and not be constantly searching for something is a skill in itself"** — the phone trains the opposite reflex.
+- **"An iPhone with a capital I"** — the fusion of device and identity. Strong language worth preserving.
+- **The moral integrity thread** — unexpected and personal. The phone isn't just a time problem; it's an agency and identity problem.
+- **The isolation trap** — making the phone hard to access worked, but at the cost of social disconnection, which burned him out and pulled him back harder. That's a real design constraint: friction-based solutions can backfire.
+- **The hyper-optimization failure** — he tried to think his way out of the problem with a system so thorough it collapsed. The insight he landed on (presence as a skill) is worth carrying into design.
+- **He's the most analytically self-aware candidate.** The gap between how clearly he understands the problem and his inability to solve it is the most honest data point in the cohort about how hard this actually is.
+
+---
+
+## Related
+[[Munther Meeting Template]]
+[[Interview Guide]]
+[[Interview Candidates]]

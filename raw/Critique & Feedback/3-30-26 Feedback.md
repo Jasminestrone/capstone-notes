@@ -10,5 +10,5 @@ https://hcitang.org/uploads/Teaching/ideo-method-cards-2by1.pdf
 [[3-27-26 Presentation feedback]]
 [[3-31-26 Feedback]]
 [[Cultural Probe Kit]]
-[[Interview Guide]]
+[[Meetings/Student Interviews/Interview Guide]]
 [[Design for behavioral change]]

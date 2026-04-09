@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boredom Diary — Cultural Probe</title>
+<style>
+  :root {
+    --indigo: #4F46E5;
+    --indigo-light: #EEF2FF;
+    --indigo-dark: #3730A3;
+    --amber: #F59E0B;
+    --gray-100: #F3F4F6;
+    --gray-200: #E5E7EB;
+    --gray-400: #9CA3AF;
+    --gray-600: #4B5563;
+    --gray-800: #1F2937;
+    --white: #ffffff;
+    --radius: 12px;
+    --shadow: 0 2px 12px rgba(79,70,229,.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #F5F6FA;
+    color: var(--gray-800);
+    min-height: 100vh;
+  }
+
+  /* ── Nav ── */
+  nav {
+    background: var(--indigo);
+    color: #fff;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,.18);
+  }
+  nav .logo { font-size: 1.1rem; font-weight: 700; letter-spacing: -.3px; }
+  nav .nav-tabs { display: flex; gap: 6px; }
+  nav .nav-tab {
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,.4);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: .78rem;
+    cursor: pointer;
+    transition: background .2s;
+  }
+  nav .nav-tab.active, nav .nav-tab:hover { background: rgba(255,255,255,.2); }
+
+  /* ── Pages ── */
+  .page { display: none; max-width: 560px; margin: 0 auto; padding: 20px 16px 80px; }
+  .page.active { display: block; }
+
+  /* ── Cover ── */
+  .cover-hero {
+    background: var(--indigo);
+    border-radius: var(--radius);
+    padding: 36px 24px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  .cover-hero .emoji { font-size: 3rem; margin-bottom: 12px; }
+  .cover-hero h1 { font-size: 1.75rem; font-weight: 800; margin-bottom: 6px; }
+  .cover-hero p  { font-size: .9rem; opacity: .85; }
+
+  .info-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  .info-card h2 { font-size: 1rem; margin-bottom: 14px; color: var(--indigo); }
+
+  .field { margin-bottom: 14px; }
+  .field label { display: block; font-size: .8rem; font-weight: 600; color: var(--gray-600); margin-bottom: 5px; }
+  .field input[type="text"],
+  .field input[type="date"],
+  .field textarea,
+  .field select {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: .9rem;
+    color: var(--gray-800);
+    background: #fff;
+    transition: border-color .2s;
+    font-family: inherit;
+    resize: vertical;
+  }
+  .field input:focus, .field textarea:focus, .field select:focus {
+    outline: none;
+    border-color: var(--indigo);
+    box-shadow: 0 0 0 3px rgba(79,70,229,.12);
+  }
+
+  /* ── Instruction steps ── */
+  .steps { list-style: none; }
+  .steps li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: var(--indigo);
+    color: #fff;
+    font-weight: 700;
+    font-size: .85rem;
+    display: grid;
+    place-items: center;
+  }
+  .step-text strong { display: block; font-size: .9rem; margin-bottom: 2px; }
+  .step-text span   { font-size: .82rem; color: var(--gray-600); }
+
+  /* ── Day tabs ── */
+  .day-nav {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .day-btn {
+    padding: 7px 14px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 20px;
+    background: #fff;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--gray-600);
+    transition: all .2s;
+  }
+  .day-btn.active {
+    background: var(--indigo);
+    border-color: var(--indigo);
+    color: #fff;
+  }
+  .day-panel { display: none; }
+  .day-panel.active { display: block; }
+
+  /* ── Day header ── */
+  .day-header {
+    background: var(--indigo);
+    border-radius: var(--radius);
+    padding: 16px 18px;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+  .day-header h2 { font-size: 1.1rem; font-weight: 800; }
+  .day-header p  { font-size: .8rem; opacity: .8; margin-top: 2px; }
+  .day-header .date-field {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .82rem;
+  }
+  .day-header .date-field input {
+    background: rgba(255,255,255,.15);
+    border: 1.5px solid rgba(255,255,255,.4);
+    border-radius: 6px;
+    padding: 4px 8px;
+    color: #fff;
+    font-size: .82rem;
+    width: 150px;
+  }
+  .day-header .date-field input::placeholder { color: rgba(255,255,255,.6); }
+
+  /* ── Entry card ── */
+  .entry-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 18px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+    border-left: 4px solid var(--indigo);
+  }
+  .entry-card h3 {
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--indigo);
+    margin-bottom: 14px;
+  }
+
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+  /* ── Scale ── */
+  .scale-label {
+    font-size: .8rem; font-weight: 600; color: var(--gray-600);
+    margin-bottom: 8px; display: block;
+  }
+  .scale-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .scale-row label {
+    flex: 1;
+    text-align: center;
+    background: var(--gray-100);
+    border: 1.5px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 8px 4px 6px;
+    font-size: .75rem;
+    cursor: pointer;
+    transition: all .15s;
+  }
+  .scale-row input[type="radio"] { display: none; }
+  .scale-row input[type="radio"]:checked + label {
+    background: var(--indigo);
+    border-color: var(--indigo);
+    color: #fff;
+    font-weight: 700;
+  }
+  .scale-ends {
+    display: flex; justify-content: space-between;
+    font-size: .7rem; color: var(--gray-400); margin-bottom: 12px;
+  }
+
+  /* ── Checkbox chips ── */
+  .chip-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+  .chip-group input[type="checkbox"] { display: none; }
+  .chip-group label {
+    padding: 5px 11px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 20px;
+    font-size: .78rem;
+    cursor: pointer;
+    background: #fff;
+    transition: all .15s;
+  }
+  .chip-group input[type="checkbox"]:checked + label {
+    background: var(--indigo-light);
+    border-color: var(--indigo);
+    color: var(--indigo);
+    font-weight: 600;
+  }
+  .chip-other { width: 100%; margin-top: 4px; }
+  .chip-other input {
+    width: 100%; padding: 6px 10px; border: 1.5px solid var(--gray-200);
+    border-radius: 8px; font-size: .82rem; font-family: inherit;
+  }
+  .chip-other input:focus { outline: none; border-color: var(--indigo); }
+
+  /* ── Missed boredom notice ── */
+  .missed-box {
+    background: var(--indigo-light);
+    border-radius: var(--radius);
+    padding: 12px 14px;
+    margin-top: 4px;
+    margin-bottom: 18px;
+  }
+  .missed-box label { font-size: .82rem; color: var(--indigo); font-weight: 600; display: flex; align-items: center; gap: 8px; cursor: pointer; }
+  .missed-note { margin-top: 8px; display: none; }
+  .missed-note textarea {
+    width: 100%; padding: 8px 10px; border: 1.5px solid var(--gray-200);
+    border-radius: 8px; font-size: .82rem; font-family: inherit; resize: none; height: 60px;
+  }
+
+  /* ── Reflection ── */
+  .reflect-q { margin-bottom: 16px; }
+  .reflect-q .q-label {
+    font-size: .85rem; font-weight: 700; margin-bottom: 6px; display: block;
+  }
+  .reflect-q textarea {
+    width: 100%; height: 80px; padding: 9px 12px;
+    border: 1.5px solid var(--gray-200); border-radius: 8px;
+    font-size: .85rem; font-family: inherit; resize: none;
+  }
+  .reflect-q textarea:focus { outline: none; border-color: var(--indigo); box-shadow: 0 0 0 3px rgba(79,70,229,.1); }
+
+  /* ── Export / save bar ── */
+  .bottom-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: #fff;
+    border-top: 1.5px solid var(--gray-200);
+    padding: 12px 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .15s;
+  }
+  .btn:hover { opacity: .85; }
+  .btn-primary { background: var(--indigo); color: #fff; }
+  .btn-outline { background: transparent; border: 1.5px solid var(--indigo); color: var(--indigo); }
+
+  /* ── Toast ── */
+  #toast {
+    position: fixed; bottom: 70px; left: 50%; transform: translateX(-50%) translateY(20px);
+    background: var(--gray-800); color: #fff; padding: 10px 18px;
+    border-radius: 20px; font-size: .83rem; opacity: 0;
+    transition: all .3s; pointer-events: none; z-index: 999;
+  }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  /* ── Progress indicator ── */
+  .progress-bar {
+    height: 4px; border-radius: 2px; background: var(--gray-200);
+    margin-bottom: 16px; overflow: hidden;
+  }
+  .progress-fill { height: 100%; background: var(--indigo); border-radius: 2px; transition: width .4s; }
+
+  @media print {
+    nav, .bottom-bar, .day-nav, #toast { display: none !important; }
+    .page { display: block !important; max-width: 100%; padding: 10px; }
+    .day-panel { display: block !important; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">😴 Boredom Diary</div>
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showPage('cover')">Home</button>
+    <button class="nav-tab" onclick="showPage('instructions')">How to</button>
+    <button class="nav-tab" onclick="showPage('diary')">Diary</button>
+    <button class="nav-tab" onclick="showPage('reflection')">Reflect</button>
+  </div>
+</nav>
+
+<!-- ═══════════ COVER ═══════════ -->
+<div class="page active" id="page-cover">
+  <div class="cover-hero">
+    <div class="emoji">😴</div>
+    <h1>Boredom Diary</h1>
+    <p>A 3–5 Day Cultural Probe · Student Study</p>
+  </div>
+
+  <div class="info-card">
+    <h2>Your Details</h2>
+    <div class="field">
+      <label>Your Name</label>
+      <input type="text" id="p-name" placeholder="e.g. Jordan Smith" oninput="autosave()">
+    </div>
+    <div class="field">
+      <label>Participant / Study ID</label>
+      <input type="text" id="p-id" placeholder="e.g. P-007" oninput="autosave()">
+    </div>
+    <div class="row-2">
+      <div class="field">
+        <label>Study Start Date</label>
+        <input type="date" id="p-start" oninput="autosave()">
+      </div>
+      <div class="field">
+        <label>Study End Date</label>
+        <input type="date" id="p-end" oninput="autosave()">
+      </div>
+    </div>
+  </div>
+
+  <div class="info-card" style="border-left:4px solid var(--amber);">
+    <h2 style="color:#B45309;">Quick-start tips</h2>
+    <ul style="padding-left:18px;font-size:.85rem;color:var(--gray-600);line-height:1.8;">
+      <li>Tap <strong>Diary</strong> in the nav the moment you feel bored.</li>
+      <li>Fill in the next empty entry as it's happening.</li>
+      <li>Your progress saves automatically to this device.</li>
+      <li>Use <strong>Export</strong> at the bottom to send your data.</li>
+    </ul>
+  </div>
+
+  <button class="btn btn-primary" style="width:100%;padding:14px;" onclick="showPage('instructions')">
+    Read the instructions →
+  </button>
+</div>
+
+<!-- ═══════════ INSTRUCTIONS ═══════════ -->
+<div class="page" id="page-instructions">
+  <div class="info-card">
+    <h2 style="font-size:1.15rem;margin-bottom:16px;">How to use this diary</h2>
+    <ul class="steps">
+      <li><div class="step-num">1</div><div class="step-text"><strong>Carry it with you</strong><span>Keep this page open (bookmark it) during the 3–5 day study period.</span></div></li>
+      <li><div class="step-num">2</div><div class="step-text"><strong>Capture the moment</strong><span>The instant you feel bored, open the Diary tab and fill in the next empty entry in real time — not from memory later.</span></div></li>
+      <li><div class="step-num">3</div><div class="step-text"><strong>Be honest</strong><span>There are no right or wrong answers. Your genuine experience is exactly what matters.</span></div></li>
+      <li><div class="step-num">4</div><div class="step-text"><strong>Up to 3 entries per day</strong><span>Each day has 3 entry slots. If you feel bored more than 3 times, use the Extra entry at the bottom of that day.</span></div></li>
+      <li><div class="step-num">5</div><div class="step-text"><strong>Missed a day?</strong><span>Tick the "didn't feel bored" box or add a brief note at the bottom of that day's section.</span></div></li>
+      <li><div class="step-num">6</div><div class="step-text"><strong>Reflect at the end</strong><span>After your last day, go to the <strong>Reflect</strong> tab and answer the short reflection questions.</span></div></li>
+      <li><div class="step-num">7</div><div class="step-text"><strong>Export &amp; return</strong><span>Use the Export button to download your data as a text file, then share it with the researcher.</span></div></li>
+    </ul>
+  </div>
+
+  <div class="info-card">
+    <h2 style="margin-bottom:14px;">What each question asks</h2>
+    <table style="width:100%;border-collapse:collapse;font-size:.83rem;">
+      <tr style="border-bottom:1.5px solid var(--gray-200);">
+        <td style="padding:8px 6px;font-weight:700;color:var(--indigo);width:38%;">Time &amp; Duration</td>
+        <td style="padding:8px 6px;color:var(--gray-600);">When it started and how long it lasted.</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--gray-200);">
+        <td style="padding:8px 6px;font-weight:700;color:var(--indigo);">How bored?</td>
+        <td style="padding:8px 6px;color:var(--gray-600);">Intensity: 1 = barely bored, 5 = intensely bored.</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--gray-200);">
+        <td style="padding:8px 6px;font-weight:700;color:var(--indigo);">Where?</td>
+        <td style="padding:8px 6px;color:var(--gray-600);">The physical space you're in.</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--gray-200);">
+        <td style="padding:8px 6px;font-weight:700;color:var(--indigo);">Who with?</td>
+        <td style="padding:8px 6px;color:var(--gray-600);">Your social situation at that moment.</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--gray-200);">
+        <td style="padding:8px 6px;font-weight:700;color:var(--indigo);">Trigger</td>
+        <td style="padding:8px 6px;color:var(--gray-600);">The activity or situation that brought on boredom.</td>
+      </tr>
+      <tr style="border-bottom:1px solid var(--gray-200);">
+        <td style="padding:8px 6px;font-weight:700;color:var(--indigo);">Response</td>
+        <td style="padding:8px 6px;color:var(--gray-600);">What you instinctively did or felt like doing.</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 6px;font-weight:700;color:var(--indigo);">Thoughts/Feelings</td>
+        <td style="padding:8px 6px;color:var(--gray-600);">Any observations, emotions, or wishes worth noting.</td>
+      </tr>
+    </table>
+  </div>
+
+  <button class="btn btn-primary" style="width:100%;padding:14px;" onclick="showPage('diary')">
+    Start the diary →
+  </button>
+</div>
+
+<!-- ═══════════ DIARY ═══════════ -->
+<div class="page" id="page-diary">
+  <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+  <div class="day-nav" id="day-nav">
+    <button class="day-btn active" onclick="showDay(0)">Day 1</button>
+    <button class="day-btn" onclick="showDay(1)">Day 2</button>
+    <button class="day-btn" onclick="showDay(2)">Day 3</button>
+    <button class="day-btn" onclick="showDay(3)">Day 4</button>
+    <button class="day-btn" onclick="showDay(4)">Day 5</button>
+  </div>
+
+  <!-- Days will be injected by JS -->
+  <div id="days-container"></div>
+</div>
+
+<!-- ═══════════ REFLECTION ═══════════ -->
+<div class="page" id="page-reflection">
+  <div class="day-header">
+    <h2>End-of-Study Reflection</h2>
+    <p>Complete this after your last diary day. Take your time!</p>
+  </div>
+
+  <div class="info-card">
+    <div class="reflect-q">
+      <span class="q-label">1. Which situation made you feel <em>most</em> bored during the study?</span>
+      <textarea id="r1" placeholder="Describe the situation…" oninput="autosave()"></textarea>
+    </div>
+    <div class="reflect-q">
+      <span class="q-label">2. Did anything surprise you about when or how often you felt bored?</span>
+      <textarea id="r2" placeholder="Any surprises or patterns you noticed…" oninput="autosave()"></textarea>
+    </div>
+    <div class="reflect-q">
+      <span class="q-label">3. What did you usually do to cope with boredom — and did it help?</span>
+      <textarea id="r3" placeholder="Coping strategies and whether they worked…" oninput="autosave()"></textarea>
+    </div>
+    <div class="reflect-q">
+      <span class="q-label">4. Do you see a pattern in <em>where</em> or <em>when</em> your boredom tends to happen?</span>
+      <textarea id="r4" placeholder="Any recurring contexts or times of day…" oninput="autosave()"></textarea>
+    </div>
+    <div class="reflect-q">
+      <span class="q-label">5. Anything else you'd like to share with the researcher?</span>
+      <textarea id="r5" placeholder="Open space — anything goes!" oninput="autosave()"></textarea>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════ BOTTOM BAR ═══════════ -->
+<div class="bottom-bar">
+  <button class="btn btn-outline" onclick="clearData()">Clear</button>
+  <button class="btn btn-primary" onclick="exportData()">Export data ↓</button>
+</div>
+
+<div id="toast">Saved!</div>
+
+<script>
+// ─── Day labels ───
+const DAY_LABELS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+const TRIGGERS   = ["Attending class", "Studying / homework", "On my phone", "Waiting for something", "Commuting / travel", "In a social situation", "Between tasks"];
+const LOCATIONS  = ["Home", "Lecture / class", "Library", "Outdoors", "On transit", "Café / social space", "Workplace"];
+const SOCIALS    = ["Alone", "With friends", "With classmates", "With family", "Around strangers", "Mixed group"];
+const RESPONSES  = ["Picked up my phone", "Doodled / fidgeted", "Day-dreamed", "Talked to someone", "Left the situation", "Tried to focus", "Did nothing"];
+
+// ─── Build diary days ───
+function buildDays() {
+  const container = document.getElementById("days-container");
+  container.innerHTML = "";
+  for (let d = 0; d < 5; d++) {
+    const panel = document.createElement("div");
+    panel.className = "day-panel" + (d === 0 ? " active" : "");
+    panel.id = `day-${d}`;
+    panel.innerHTML = `
+      <div class="day-header">
+        <h2>Day ${d+1} · ${DAY_LABELS[d]}</h2>
+        <p>Fill in each entry the moment you feel bored.</p>
+        <div class="date-field">
+          <span>Date:</span>
+          <input type="date" id="day-date-${d}" onchange="autosave()" placeholder="YYYY-MM-DD">
+        </div>
+      </div>
+      ${buildEntry(d,0)}
+      ${buildEntry(d,1)}
+      ${buildEntry(d,2)}
+      <div class="missed-box">
+        <label>
+          <input type="checkbox" id="missed-${d}" onchange="toggleMissed(${d});autosave()">
+          I didn't feel bored today / couldn't record it
+        </label>
+        <div class="missed-note" id="missed-note-${d}">
+          <textarea id="missed-text-${d}" placeholder="Brief reason or note…" oninput="autosave()"></textarea>
+        </div>
+      </div>
+    `;
+    container.appendChild(panel);
+  }
+}
+
+function buildEntry(d, e) {
+  const id = `d${d}e${e}`;
+  const locChips  = LOCATIONS.map((l,i)  => `<input type="checkbox" id="${id}-loc-${i}" value="${l}" onchange="autosave()"><label for="${id}-loc-${i}">${l}</label>`).join("");
+  const socChips  = SOCIALS.map((s,i)    => `<input type="checkbox" id="${id}-soc-${i}" value="${s}" onchange="autosave()"><label for="${id}-soc-${i}">${s}</label>`).join("");
+  const trigChips = TRIGGERS.map((t,i)   => `<input type="checkbox" id="${id}-tri-${i}" value="${t}" onchange="autosave()"><label for="${id}-tri-${i}">${t}</label>`).join("");
+  const respChips = RESPONSES.map((r,i)  => `<input type="checkbox" id="${id}-res-${i}" value="${r}" onchange="autosave()"><label for="${id}-res-${i}">${r}</label>`).join("");
+  const scaleItems = [1,2,3,4,5].map(n => `
+    <input type="radio" name="${id}-scale" id="${id}-sc${n}" value="${n}" onchange="autosave()">
+    <label for="${id}-sc${n}">${n}</label>`).join("");
+
+  return `
+  <div class="entry-card">
+    <h3>Entry ${e+1}</h3>
+    <div class="row-2">
+      <div class="field">
+        <label>Time</label>
+        <input type="text" id="${id}-time" placeholder="e.g. 2:30 PM" oninput="autosave()">
+      </div>
+      <div class="field">
+        <label>Duration</label>
+        <input type="text" id="${id}-dur" placeholder="e.g. ~20 min" oninput="autosave()">
+      </div>
+    </div>
+
+    <div class="field">
+      <span class="scale-label">How bored are you right now?</span>
+      <div class="scale-row">${scaleItems}</div>
+      <div class="scale-ends"><span>Not bored at all</span><span>Extremely bored</span></div>
+    </div>
+
+    <div class="field">
+      <label>Where are you?</label>
+      <div class="chip-group">${locChips}</div>
+      <div class="chip-other"><input type="text" id="${id}-loc-other" placeholder="Other location…" oninput="autosave()"></div>
+    </div>
+
+    <div class="field">
+      <label>Who are you with?</label>
+      <div class="chip-group">${socChips}</div>
+    </div>
+
+    <div class="field">
+      <label>What were you doing when boredom hit?</label>
+      <div class="chip-group">${trigChips}</div>
+      <div class="chip-other"><input type="text" id="${id}-tri-other" placeholder="Something else…" oninput="autosave()"></div>
+    </div>
+
+    <div class="field">
+      <label>What do you think triggered it?</label>
+      <input type="text" id="${id}-why" placeholder="e.g. repetitive task, waiting, understimulation…" oninput="autosave()">
+    </div>
+
+    <div class="field">
+      <label>What did you do in response?</label>
+      <div class="chip-group">${respChips}</div>
+    </div>
+
+    <div class="field">
+      <label>Any thoughts or feelings worth noting?</label>
+      <textarea id="${id}-notes" rows="2" placeholder="Anything on your mind…" oninput="autosave()"></textarea>
+    </div>
+  </div>`;
+}
+
+// ─── Navigation ───
+function showPage(name) {
+  document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".nav-tab").forEach(t => t.classList.remove("active"));
+  document.getElementById("page-" + name).classList.add("active");
+  const tabs = document.querySelectorAll(".nav-tab");
+  const map = {cover:0, instructions:1, diary:2, reflection:3};
+  if (map[name] !== undefined) tabs[map[name]].classList.add("active");
+  window.scrollTo(0,0);
+}
+
+function showDay(d) {
+  document.querySelectorAll(".day-panel").forEach(p => p.classList.remove("active"));
+  document.querySelectorAll(".day-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById(`day-${d}`).classList.add("active");
+  document.querySelectorAll(".day-btn")[d].classList.add("active");
+}
+
+function toggleMissed(d) {
+  const checked = document.getElementById(`missed-${d}`).checked;
+  document.getElementById(`missed-note-${d}`).style.display = checked ? "block" : "none";
+}
+
+// ─── Autosave ───
+function autosave() {
+  const data = collectData();
+  try { localStorage.setItem("boredom-probe", JSON.stringify(data)); } catch(e) {}
+  updateProgress(data);
+  showToast("Saved");
+}
+
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove("show"), 1800);
+}
+
+// ─── Progress ───
+function updateProgress(data) {
+  let filled = 0, total = 0;
+  for (let d = 0; d < 5; d++) {
+    for (let e = 0; e < 3; e++) {
+      total++;
+      const id = `d${d}e${e}`;
+      if (data.days?.[d]?.entries?.[e]?.time) filled++;
+    }
+  }
+  document.getElementById("progress-fill").style.width = (filled/total*100) + "%";
+}
+
+// ─── Collect all form data ───
+function collectData() {
+  const out = {
+    participant: {
+      name:  val("p-name"),
+      id:    val("p-id"),
+      start: val("p-start"),
+      end:   val("p-end"),
+    },
+    days: [],
+    reflection: {
+      q1: val("r1"), q2: val("r2"), q3: val("r3"),
+      q4: val("r4"), q5: val("r5"),
+    }
+  };
+  for (let d = 0; d < 5; d++) {
+    const day = { date: val(`day-date-${d}`), entries: [], missed: false, missedNote: "" };
+    day.missed     = document.getElementById(`missed-${d}`)?.checked || false;
+    day.missedNote = val(`missed-text-${d}`);
+    for (let e = 0; e < 3; e++) {
+      const id = `d${d}e${e}`;
+      day.entries.push({
+        time:     val(`${id}-time`),
+        duration: val(`${id}-dur`),
+        scale:    checkedRadio(`${id}-scale`),
+        location: checkedBoxes(id, "loc", LOCATIONS),
+        locOther: val(`${id}-loc-other`),
+        social:   checkedBoxes(id, "soc", SOCIALS),
+        trigger:  checkedBoxes(id, "tri", TRIGGERS),
+        triOther: val(`${id}-tri-other`),
+        why:      val(`${id}-why`),
+        response: checkedBoxes(id, "res", RESPONSES),
+        notes:    val(`${id}-notes`),
+      });
+    }
+    out.days.push(day);
+  }
+  return out;
+}
+
+function val(id) {
+  const el = document.getElementById(id);
+  return el ? el.value.trim() : "";
+}
+function checkedRadio(name) {
+  const el = document.querySelector(`input[name="${name}"]:checked`);
+  return el ? el.value : "";
+}
+function checkedBoxes(prefix, key, arr) {
+  return arr.filter((_, i) => document.getElementById(`${prefix}-${key}-${i}`)?.checked)
+            .join(", ");
+}
+
+// ─── Load saved data ───
+function loadSaved() {
+  try {
+    const raw = localStorage.getItem("boredom-probe");
+    if (!raw) return;
+    const data = JSON.parse(raw);
+    set("p-name",  data.participant?.name);
+    set("p-id",    data.participant?.id);
+    set("p-start", data.participant?.start);
+    set("p-end",   data.participant?.end);
+    for (let d = 0; d < 5; d++) {
+      const day = data.days?.[d];
+      if (!day) continue;
+      set(`day-date-${d}`, day.date);
+      if (day.missed) {
+        const cb = document.getElementById(`missed-${d}`);
+        if (cb) { cb.checked = true; toggleMissed(d); }
+      }
+      set(`missed-text-${d}`, day.missedNote);
+      for (let e = 0; e < 3; e++) {
+        const entry = day.entries?.[e];
+        if (!entry) continue;
+        const id = `d${d}e${e}`;
+        set(`${id}-time`, entry.time);
+        set(`${id}-dur`,  entry.duration);
+        if (entry.scale) {
+          const r = document.querySelector(`input[name="${id}-scale"][value="${entry.scale}"]`);
+          if (r) r.checked = true;
+        }
+        setChips(id, "loc", LOCATIONS, entry.location);
+        set(`${id}-loc-other`, entry.locOther);
+        setChips(id, "soc", SOCIALS,    entry.social);
+        setChips(id, "tri", TRIGGERS,   entry.trigger);
+        set(`${id}-tri-other`, entry.triOther);
+        set(`${id}-why`,  entry.why);
+        setChips(id, "res", RESPONSES,  entry.response);
+        set(`${id}-notes`, entry.notes);
+      }
+    }
+    set("r1", data.reflection?.q1); set("r2", data.reflection?.q2);
+    set("r3", data.reflection?.q3); set("r4", data.reflection?.q4);
+    set("r5", data.reflection?.q5);
+    updateProgress(data);
+  } catch(e) {}
+}
+
+function set(id, val) {
+  const el = document.getElementById(id);
+  if (el && val !== undefined && val !== null) el.value = val;
+}
+function setChips(prefix, key, arr, valStr) {
+  if (!valStr) return;
+  const vals = valStr.split(", ");
+  arr.forEach((item, i) => {
+    const cb = document.getElementById(`${prefix}-${key}-${i}`);
+    if (cb) cb.checked = vals.includes(item);
+  });
+}
+
+// ─── Export ───
+function exportData() {
+  const data = collectData();
+  let out = "BOREDOM CULTURAL PROBE — EXPORT\n";
+  out += "=".repeat(40) + "\n\n";
+  out += `Participant: ${data.participant.name}  |  ID: ${data.participant.id}\n`;
+  out += `Study period: ${data.participant.start} → ${data.participant.end}\n\n`;
+
+  data.days.forEach((day, d) => {
+    out += `${"─".repeat(40)}\nDAY ${d+1} (${DAY_LABELS[d]})  |  Date: ${day.date || "—"}\n`;
+    if (day.missed) { out += `  [No boredom recorded: ${day.missedNote || "—"}]\n`; return; }
+    day.entries.forEach((e, i) => {
+      if (!e.time && !e.scale) return;
+      out += `\n  Entry ${i+1}\n`;
+      out += `  Time: ${e.time||"—"}  |  Duration: ${e.duration||"—"}  |  Boredom level: ${e.scale||"—"}/5\n`;
+      out += `  Location: ${e.location||"—"}${e.locOther ? ` (${e.locOther})` : ""}\n`;
+      out += `  Social context: ${e.social||"—"}\n`;
+      out += `  Activity/trigger: ${e.trigger||"—"}${e.triOther ? ` (${e.triOther})` : ""}\n`;
+      out += `  Why bored: ${e.why||"—"}\n`;
+      out += `  Response: ${e.response||"—"}\n`;
+      out += `  Notes: ${e.notes||"—"}\n`;
+    });
+  });
+
+  out += `\n${"=".repeat(40)}\nREFLECTION\n${"=".repeat(40)}\n`;
+  const rqs = [
+    "Most boring situation",
+    "Surprises / patterns",
+    "Coping strategies",
+    "Patterns in where / when",
+    "Other notes"
+  ];
+  [data.reflection.q1, data.reflection.q2, data.reflection.q3,
+   data.reflection.q4, data.reflection.q5].forEach((a, i) => {
+    out += `\nQ${i+1}. ${rqs[i]}:\n${a || "—"}\n`;
+  });
+
+  const name = data.participant.name || "participant";
+  const blob = new Blob([out], {type: "text/plain"});
+  const url  = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `boredom_probe_${name.replace(/\s+/g,"_")}.txt`;
+  a.click();
+  URL.revokeObjectURL(url);
+  showToast("Exported!");
+}
+
+function clearData() {
+  if (!confirm("Clear all entered data? This cannot be undone.")) return;
+  try { localStorage.removeItem("boredom-probe"); } catch(e) {}
+  location.reload();
+}
+
+// ─── Init ───
+buildDays();
+loadSaved();
+</script>
+</body>
+</html>
