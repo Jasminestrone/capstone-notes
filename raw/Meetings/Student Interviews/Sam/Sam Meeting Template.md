@@ -3,10 +3,10 @@
 **Profile:** Youngest interviewee · Boredom is very uncomfortable · 6+ hrs screen time daily · Never tried to reduce use · Hasn't rationalized the issue or doesn't care to change
 
 - Record with permission
-- Let him lead
-- Avoid leading questions. If he goes somewhere unexpected, follow it.
+- Let her lead
+- Avoid leading questions. If she goes somewhere unexpected, follow it.
 - You don't have to ask every question.
-- *He's 15 — keep it casual, don't talk down. He may not have reflected on any of this before; that's valuable data.*
+- *She's 15 — keep it casual, don't talk down. She may not have reflected on any of this before; that's valuable data.*
 
 ---
 
